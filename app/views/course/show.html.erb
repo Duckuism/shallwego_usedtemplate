@@ -726,6 +726,13 @@
 
   <!-- Content
   ============================================= -->
+  <!--임시 코스 목록-->
+  <% @courses.each do|c|%>
+      <%=c.title%>
+      <a href="/course/index/<%=c.id%>">확인</a>
+      <br>
+  <% end %>
+
   <section id="content">
 
     <div class="content-wrap">

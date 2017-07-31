@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
   get 'course/new'
 
-  get 'course/create'
+  post 'course/create'
 
-  get 'course/index'
+  get 'course/index/:id' => 'course#index'
 
   get 'course/show'
 
@@ -76,5 +76,6 @@ Rails.application.routes.draw do
   resource :foreigner
 
   resource :local
+
 
 end
