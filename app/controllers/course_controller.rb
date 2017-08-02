@@ -6,7 +6,7 @@ class CourseController < ApplicationController
   end
 
   def create
-    @course = Course.new(title: params[:title])
+    @course = Course.new(title: params[:title], image: params[:img])
     @course.save
 
     @place_ids = params[:place_ids]
@@ -45,6 +45,5 @@ class CourseController < ApplicationController
   ##DELETE
   def destroy
   end
-
 
 end

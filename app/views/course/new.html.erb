@@ -776,11 +776,13 @@
 
       <!-- 지도 시작 -->
       <div id="map"></div>
+
       <div id="main_div">
         <input type="button" id="addbtn" value="add">
         <input type="button" id="save" value="save">
         <br>
         <input type="text" id="title" placeholder="title">
+        <input type="file" name="img" id="inputImage">
         <ol class="searches" id="sortable">
           <li class="ui-state-default">
             drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
@@ -1333,21 +1335,26 @@
         form.name='tempPost';
         form.method='post';
         form.action=url;
+        form.enctype="multipart/form-data";
         document.body.appendChild(form);
 
         var input=document.createElement("input");
         input.type="hidden";
         input.name='title';
         input.value = title;
-        //input.value= jQuery.JSONToString(object);
         $(form).append(input);
+        $('#body').append(form);
+
+        //image
+        var image=document.getElementById("inputImage");
+        console.log(image);
+        $(form).append(image);
         $('#body').append(form);
 
         var input=document.createElement("input");
         input.type="hidden";
         input.name='place_ids';
         input.value = p_id;
-        //input.value= jQuery.JSONToString(object);
         $(form).append(input);
         $('#body').append(form);
 
@@ -1355,11 +1362,12 @@
         input.type="hidden";
         input.name='place_names';
         input.value = p_name;
-        //input.value= jQuery.JSONToString(object);
         $(form).append(input);
         $('#body').append(form);
 
         form.submit();
+
+        //input.value= jQuery.JSONToString(object);
     }
 
     //divtag 옮기기
