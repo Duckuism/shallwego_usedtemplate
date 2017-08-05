@@ -9,10 +9,13 @@ class ForeignerController < ApplicationController
 
 
   ##READ
-  def show
+  def foreigner_list
   end
 
-  def index
+  def list
+  end
+
+  def foreigner_detail
   end
 
 

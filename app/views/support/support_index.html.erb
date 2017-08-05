@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="SemiColonWeb" />
+
+  <!-- Stylesheets
+  ============================================= -->
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/style.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/dark.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
+
+  <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Document Title
+  ============================================= -->
+  <title>FAQs with Filter | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+  <!-- Top Bar
+ ============================================= -->
+  <div id="top-bar">
+
+    <div class="container clearfix">
+
+      <div class="col_half nobottommargin">
+
+        <!-- Top Links
+        ============================================= -->
+        <div class="top-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login-register.html">Login</a>
+              <div class="top-link-section">
+                <form id="top-login" role="form">
+                  <div class="input-group" id="top-login-username">
+                    <span class="input-group-addon"><i class="icon-user"></i></span>
+                    <input type="email" class="form-control" placeholder="Email address" required="">
+                  </div>
+                  <div class="input-group" id="top-login-password">
+                    <span class="input-group-addon"><i class="icon-key"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" required="">
+                  </div>
+                  <label class="checkbox">
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                  <button class="btn btn-danger btn-block" type="submit">Sign in</button>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div><!-- .top-links end -->
+
+      </div>
+
+      <div class="col_half fright col_last nobottommargin">
+
+        <!-- Top Social
+        ============================================= -->
+        <div id="top-social">
+          <ul>
+            <li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+            <li><a href="#" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+            <li><a href="#" class="si-dribbble"><span class="ts-icon"><i class="icon-dribbble"></i></span><span class="ts-text">Dribbble</span></a></li>
+            <li><a href="#" class="si-github"><span class="ts-icon"><i class="icon-github-circled"></i></span><span class="ts-text">Github</span></a></li>
+            <li><a href="#" class="si-pinterest"><span class="ts-icon"><i class="icon-pinterest"></i></span><span class="ts-text">Pinterest</span></a></li>
+            <li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+            <li><a href="tel:+91.11.85412542" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+91.11.85412542</span></a></li>
+            <li><a href="mailto:info@canvas.com" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@canvas.com</span></a></li>
+          </ul>
+        </div><!-- #top-social end -->
+
+      </div>
+
+    </div>
+
+  </div><!-- #top-bar end -->
+
+  <!-- Header
+  ============================================= -->
+  <header id="header" class="sticky-style-2">
+
+    <div class="container clearfix">
+
+      <!-- Logo
+      ============================================= -->
+      <div id="logo">
+        <a href="index.html" class="standard-logo" data-dark-logo="/assets/shallwegologo.png"><img id="standard-logo" src="/assets/shallwegologo.png" alt="Canvas Logo" ></a>
+        <a href="index.html" class="retina-logo" data-dark-logo="/assets/shallwegologo.png"><img id="retin-logo" src="/assets/shallwegologo.png" alt="Canvas Logo" ></a>
+      </div><!-- #logo end -->
+
+
+    </div>
+
+
+
+  </header><!-- #header end -->
+
+
+
+  <!-- Content
+  ============================================= -->
+  <section id="content">
+
+    <div class="content-wrap">
+
+      <div class="container clearfix">
+
+        <!-- Post Content
+        ============================================= -->
+        <div class="postcontent nobottommargin clearfix">
+
+          <ul id="portfolio-filter" class="portfolio-filter clearfix">
+
+            <li class="activeFilter"><a href="#" data-filter="all">All</a></li>
+            <li><a href="#" data-filter=".faq-marketplace">Marketplace</a></li>
+            <li><a href="#" data-filter=".faq-authors">Authors</a></li>
+            <li><a href="#" data-filter=".faq-legal">Legal</a></li>
+            <li><a href="#" data-filter=".faq-itemdiscussion">Item Discussion</a></li>
+            <li><a href="#" data-filter=".faq-affiliates">Affiliates</a></li>
+            <li><a href="#" data-filter=".faq-miscellaneous">Miscellaneous</a></li>
+
+          </ul>
+
+          <div class="clear"></div>
+
+          <div id="faqs" class="faqs">
+
+            <div class="toggle faq faq-marketplace faq-authors">
+              <div class="togglet"><i class="toggle-closed icon-question-sign"></i><i class="toggle-open icon-question-sign"></i>How do I become an author?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-authors faq-miscellaneous">
+              <div class="togglet"><i class="toggle-closed icon-comments-alt"></i><i class="toggle-open icon-comments-alt"></i>Helpful Resources for Authors</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-miscellaneous">
+              <div class="togglet"><i class="toggle-closed icon-lock3"></i><i class="toggle-open icon-lock3"></i>How much money can I make?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-authors faq-legal faq-itemdiscussion">
+              <div class="togglet"><i class="toggle-closed icon-download-alt"></i><i class="toggle-open icon-download-alt"></i>Can I offer my items for free on a promotional basis?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-marketplace faq-authors">
+              <div class="togglet"><i class="toggle-closed icon-ok"></i><i class="toggle-open icon-ok"></i>An Introduction to the Marketplaces for Authors</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-affiliates faq-miscellaneous">
+              <div class="togglet"><i class="toggle-closed icon-money"></i><i class="toggle-open icon-money"></i>How does the Tuts+ Premium affiliate program work?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-legal faq-itemdiscussion">
+              <div class="togglet"><i class="toggle-closed icon-picture"></i><i class="toggle-open icon-picture"></i>What Images, Videos, Code or Music Can I Use in my Items?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-legal faq-authors faq-itemdiscussion">
+              <div class="togglet"><i class="toggle-closed icon-file3"></i><i class="toggle-open icon-file3"></i>Can I use trademarked names in my items?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-affiliates">
+              <div class="togglet"><i class="toggle-closed icon-bar-chart"></i><i class="toggle-open icon-bar-chart"></i>Tips for Increasing Your Referral Income</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-authors faq-itemdiscussion">
+              <div class="togglet"><i class="toggle-closed icon-phone3"></i><i class="toggle-open icon-phone3"></i>How can I get support for an item which isn't working correctly?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+            <div class="toggle faq faq-marketplace faq-itemdiscussion">
+              <div class="togglet"><i class="toggle-closed icon-credit"></i><i class="toggle-open icon-credit"></i>How do I pay for items on the Marketplaces?</div>
+              <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+            </div>
+
+          </div>
+
+
+        </div><!-- .postcontent end -->
+
+
+
+      </div>
+
+    </div>
+
+  </section><!-- #content end -->
+
+  <!-- Footer
+  ============================================= -->
+  <footer id="footer" class="dark">
+
+    <div class="container">
+
+      <!-- Footer Widgets
+      ============================================= -->
+      <div class="footer-widgets-wrap clearfix">
+
+        <div class="col_two_third">
+
+          <div class="col_one_third">
+
+            <div class="widget clearfix">
+
+              <img src="images/footer-widget-logo.png" alt="" class="footer-logo">
+
+              <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+
+              <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+                <address>
+                  <strong>Headquarters:</strong><br>
+                  795 Folsom Ave, Suite 600<br>
+                  San Francisco, CA 94107<br>
+                </address>
+                <abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
+                <abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
+                <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col_one_third">
+
+            <div class="widget widget_links clearfix">
+
+              <h4>Blogroll</h4>
+
+              <ul>
+                <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                <li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+                <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                <li><a href="http://wordpress.org/support/">Support Forums</a></li>
+                <li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+                <li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+                <li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col_one_third col_last">
+
+            <div class="widget clearfix">
+              <h4>Recent Posts</h4>
+
+              <div id="post-list-footer">
+                <div class="spost clearfix">
+                  <div class="entry-c">
+                    <div class="entry-title">
+                      <h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                    </div>
+                    <ul class="entry-meta">
+                      <li>10th July 2014</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="spost clearfix">
+                  <div class="entry-c">
+                    <div class="entry-title">
+                      <h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+                    </div>
+                    <ul class="entry-meta">
+                      <li>10th July 2014</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="spost clearfix">
+                  <div class="entry-c">
+                    <div class="entry-title">
+                      <h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+                    </div>
+                    <ul class="entry-meta">
+                      <li>10th July 2014</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col_one_third col_last">
+
+          <div class="widget clearfix" style="margin-bottom: -20px;">
+
+            <div class="row">
+
+              <div class="col-md-6 bottommargin-sm">
+                <div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+                <h5 class="nobottommargin">Total Downloads</h5>
+              </div>
+
+              <div class="col-md-6 bottommargin-sm">
+                <div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+                <h5 class="nobottommargin">Clients</h5>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="widget subscribe-widget clearfix">
+            <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+            <div class="widget-subscribe-form-result"></div>
+            <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+              <div class="input-group divcenter">
+                <span class="input-group-addon"><i class="icon-email2"></i></span>
+                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                <span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="widget clearfix" style="margin-bottom: -20px;">
+
+            <div class="row">
+
+              <div class="col-md-6 clearfix bottommargin-sm">
+                <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                  <i class="icon-facebook"></i>
+                  <i class="icon-facebook"></i>
+                </a>
+                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+              </div>
+              <div class="col-md-6 clearfix">
+                <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                  <i class="icon-rss"></i>
+                  <i class="icon-rss"></i>
+                </a>
+                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div><!-- .footer-widgets-wrap end -->
+
+    </div>
+
+    <!-- Copyrights
+    ============================================= -->
+    <div id="copyrights">
+
+      <div class="container clearfix">
+
+        <div class="col_half">
+          Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
+          <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+        </div>
+
+        <div class="col_half col_last tright">
+          <div class="fright clearfix">
+            <a href="#" class="social-icon si-small si-borderless si-facebook">
+              <i class="icon-facebook"></i>
+              <i class="icon-facebook"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-twitter">
+              <i class="icon-twitter"></i>
+              <i class="icon-twitter"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-gplus">
+              <i class="icon-gplus"></i>
+              <i class="icon-gplus"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-pinterest">
+              <i class="icon-pinterest"></i>
+              <i class="icon-pinterest"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-vimeo">
+              <i class="icon-vimeo"></i>
+              <i class="icon-vimeo"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-github">
+              <i class="icon-github"></i>
+              <i class="icon-github"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-yahoo">
+              <i class="icon-yahoo"></i>
+              <i class="icon-yahoo"></i>
+            </a>
+
+            <a href="#" class="social-icon si-small si-borderless si-linkedin">
+              <i class="icon-linkedin"></i>
+              <i class="icon-linkedin"></i>
+            </a>
+          </div>
+
+          <div class="clear"></div>
+
+          <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+        </div>
+
+      </div>
+
+    </div><!-- #copyrights end -->
+
+  </footer><!-- #footer end -->
+
+</div><!-- #wrapper end -->
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- External JavaScripts
+============================================= -->
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/plugins.js"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" src="/assets/js/functions.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        var $faqItems = $('#faqs .faq');
+        if( window.location.hash != '' ) {
+            var getFaqFilterHash = window.location.hash;
+            var hashFaqFilter = getFaqFilterHash.split('#');
+            if( $faqItems.hasClass( hashFaqFilter[1] ) ) {
+                $('#portfolio-filter li').removeClass('activeFilter');
+                $( '[data-filter=".'+ hashFaqFilter[1] +'"]' ).parent('li').addClass('activeFilter');
+                var hashFaqSelector = '.' + hashFaqFilter[1];
+                $faqItems.css('display', 'none');
+                if( hashFaqSelector != 'all' ) {
+                    $( hashFaqSelector ).fadeIn(500);
+                } else {
+                    $faqItems.fadeIn(500);
+                }
+            }
+        }
+
+        $('#portfolio-filter a').click(function(){
+            $('#portfolio-filter li').removeClass('activeFilter');
+            $(this).parent('li').addClass('activeFilter');
+            var faqSelector = $(this).attr('data-filter');
+            $faqItems.css('display', 'none');
+            if( faqSelector != 'all' ) {
+                $( faqSelector ).fadeIn(500);
+            } else {
+                $faqItems.fadeIn(500);
+            }
+            return false;
+        });
+    });
+</script>
+
+</body>
+<style>
+  #header.sticky-style-2 {
+    height: 105px;
+  }
+  .content-wrap {
+    padding: 50px 0;
+  }
+  .postcontent, .sidebar {
+    margin-right: 40px;
+    float: none;
+    margin: 0px auto;
+  }
+</style>
+</html>

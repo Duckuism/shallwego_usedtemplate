@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require_directory ./js
+//= require_directory ./demos
 
 //= require jquery
 //= require jquery_ujs

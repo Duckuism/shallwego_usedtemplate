@@ -2,7 +2,7 @@ class CourseController < ApplicationController
 
 
   ##CREATE
-  def new
+  def course_new
   end
 
   def create
@@ -16,9 +16,15 @@ class CourseController < ApplicationController
   def index
   end
 
+  def course_list
+  end
+
+  def course_detail
+  end
+
 
   ##UPDATE
-  def edit
+  def course_edit
   end
 
   def update

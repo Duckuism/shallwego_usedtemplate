@@ -176,7 +176,7 @@
     function Moment(config) {
         copyConfig(this, config);
         this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-        // Prevent infinite loop in case updateOffset creates new moment
+        // Prevent infinite loop in case updateOffset creates faq_new moment
         // objects.
         if (updateInProgress === false) {
             updateInProgress = true;
@@ -1169,7 +1169,7 @@
         config._a = [];
         getParsingFlags(config).empty = true;
 
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
+        // This array is used to make a Date, either with `faq_new Date` or `Date.UTC`
         var string = '' + config._i,
             i, parsedInput, tokens, token, skipped,
             stringLength = string.length,
@@ -2393,7 +2393,7 @@
 
     // Setting the hour should keep the time, because the user explicitly
     // specified which hour he wants. So trying to maintain the same hour (in
-    // a new timezone) makes sense. Adding/subtracting hours does not follow
+    // a faq_new timezone) makes sense. Adding/subtracting hours does not follow
     // this rule.
     var getSetHour = makeGetSet('Hours', true);
 
