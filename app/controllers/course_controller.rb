@@ -6,8 +6,14 @@ class CourseController < ApplicationController
   end
 
   def create
-    @course = Course.new(title: params[:title], image: params[:img])
+    @course = Course.new(title: params[:title])
     @course.save
+    @pictures = params[:imgs]
+    @p = []
+    @pictures.each do |img|
+      @p << @course.pictures.new(image: img)
+    end
+    @p.each(&:save)
 
     @place_ids = params[:place_ids]
     @place_names = params[:place_names]
@@ -36,14 +42,27 @@ class CourseController < ApplicationController
 
   ##UPDATE
   def edit
+    @course = Course.find(params[:id])
+
   end
 
   def update
+
+
   end
 
 
   ##DELETE
   def destroy
+    Course.destroy(params[:id])
+
+    redirect_to :back
+  end
+
+
+
+  def upload_test
+    @img = params[:file]
   end
 
 end

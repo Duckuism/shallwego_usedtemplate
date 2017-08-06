@@ -697,7 +697,7 @@
   <section id="page-title">
 
     <div class="container clearfix">
-      <h1>Ibiza: Full Moon Beach Party</h1>
+      <h1><%= @course.title %></h1>
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li><a href="#">Events</a></li>
@@ -719,7 +719,9 @@
 
           <div class="col_three_fourth">
             <div class="entry-image nobottommargin">
-              <a href="#"><%= image_tag @course.image.main.url %></a>
+
+              <a href="#"><%= image_tag @course.pictures[0].image.main.url %></a>
+
               <div class="entry-overlay">
                 <span class="hidden-xs">Starts in: </span><div id="event-countdown" class="countdown"></div>
               </div>
@@ -753,6 +755,7 @@
                   <input type="button" class="place" id="<%=l.place_id%>" value="<%= l.name %>">
                 </p>
             <% end %>
+
 
             <h4>Inclusions</h4>
 
@@ -800,14 +803,19 @@
             <!-- Events Single Gallery Thumbs
             ============================================= -->
             <div class="masonry-thumbs col-4" data-lightbox="gallery">
-              <a href="/assets/events/1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/1.jpg" alt="Gallery Thumb 1"></a>
-              <a href="/assets/events/2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/2.jpg" alt="Gallery Thumb 2"></a>
-              <a href="/assets/events/3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/3.jpg" alt="Gallery Thumb 3"></a>
-              <a href="/assets/events/4.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/4.jpg" alt="Gallery Thumb 4"></a>
-              <a href="/assets/events/5.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/5.jpg" alt="Gallery Thumb 5"></a>
-              <a href="/assets/events/6.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/6.jpg" alt="Gallery Thumb 6"></a>
-              <a href="/assets/events/7.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/7.jpg" alt="Gallery Thumb 7"></a>
-              <a href="/assets/events/8.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/8.jpg" alt="Gallery Thumb 8"></a>
+
+              <% @course.pictures.each do |p| %>
+                  <a href="<%= p.image.url  %>" data-lightbox="gallery-item"><%= image_tag p.image.main.url, class:'image_fade' %></a>
+              <% end %>
+
+              <!--<a href="/assets/events/1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/1.jpg" alt="Gallery Thumb 1"></a>-->
+              <!--<a href="/assets/events/2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/2.jpg" alt="Gallery Thumb 2"></a>-->
+              <!--<a href="/assets/events/3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/3.jpg" alt="Gallery Thumb 3"></a>-->
+              <!--<a href="/assets/events/4.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/4.jpg" alt="Gallery Thumb 4"></a>-->
+              <!--<a href="/assets/events/5.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/5.jpg" alt="Gallery Thumb 5"></a>-->
+              <!--<a href="/assets/events/6.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/6.jpg" alt="Gallery Thumb 6"></a>-->
+              <!--<a href="/assets/events/7.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/7.jpg" alt="Gallery Thumb 7"></a>-->
+              <!--<a href="/assets/events/8.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/assets/events/thumbs/8.jpg" alt="Gallery Thumb 8"></a>-->
             </div><!-- Event Single Gallery Thumbs End -->
 
           </div>

@@ -37,6 +37,8 @@ Rails.application.routes.draw do
 
   get 'course/delete'
 
+  post 'course/upload_test'
+
 
 
   get 'local/new'

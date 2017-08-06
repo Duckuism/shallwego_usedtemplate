@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# #multi-images upload
+# gem 'dropzonejs-rails'
+
 # Store image in aws S3
 gem 'fog-aws'
 gem 'mini_magick'

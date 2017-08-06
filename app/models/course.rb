@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
   has_many :locations, dependent: :destroy
-  mount_uploader :image, ImageUploader
+  has_many :pictures, dependent: :destroy
+
 end
