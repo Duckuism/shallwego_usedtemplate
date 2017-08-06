@@ -23,8 +23,8 @@ module SHALLWEGO
         :address    => 'smtp.gmail.com',
         :domain     =>  'mail.google.com',
         :port       =>  587,
-        :user_name  =>  'jjbs0408@gmail.com',
-        :password   =>  'pyt51213',
+        :user_name  =>  '',
+        :password   =>  '',
         :authentication =>  'login',
         :enable_starttls_auto => true
     }
