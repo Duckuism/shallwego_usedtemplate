@@ -13,7 +13,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :phone
       # 전화번호
       t.text :introduce
-      # 자기소개
+      t.string :image
+      # 자기소개,프로필사진
 
       ## Recoverable
       t.string   :reset_password_token

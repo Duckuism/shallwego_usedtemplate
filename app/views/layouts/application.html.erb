@@ -5,6 +5,9 @@
       <a href="/users/sign_out" data-method="delete" data-confirm="로그아웃 하시겠습니까?">로그아웃</a>
       <a href="/users/edit"><%=current_user.name%></a>
   <%else%>
+
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+
       <a href="/users/sign_in">로그인</a>
       <a href="/users/sign_up">회원가입</a>
   <%end%>

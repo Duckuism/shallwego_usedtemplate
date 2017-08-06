@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:from])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:phone])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:introduce])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:image])
     # sign_up 변수추가
 
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
@@ -20,6 +21,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:from])
     devise_parameter_sanitizer.permit(:account_update, keys: [:phone])
     devise_parameter_sanitizer.permit(:account_update, keys: [:introduce])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:image])
     # edit 변수추가
   end
 end
