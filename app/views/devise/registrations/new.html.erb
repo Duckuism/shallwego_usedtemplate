@@ -795,7 +795,10 @@
 
                       <div class="col_full">
                         <%= f.label :gender %><br />
-                        <%= f.text_field :gender, class:"form-control", autofocus: true %>
+                        <%= f.radio_button :gender, 'Male', :checked => false %>
+                        <%= label :gender, 'Male' %>
+                        <%= f.radio_button :gender, 'Female' %>
+                        <%= label :gender, 'Female' %>
                       </div>
 
                       <div class="col_full">

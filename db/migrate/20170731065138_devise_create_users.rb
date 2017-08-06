@@ -6,13 +6,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :encrypted_password, null: false, default: ""
       t.string :name,               null: false, default: ""
       # 이름
-      t.string :gender,             null: false, default: ""
+      t.string :gender
       # 성별
-      t.string :from,               null: false, default: ""
+      t.string :from
       # 국적
-      t.string :phone,              null: false, default: ""
+      t.string :phone
       # 전화번호
-      t.text :introduce,            null: false, default: ""
+      t.text :introduce
       # 자기소개
 
       ## Recoverable
