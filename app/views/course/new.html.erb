@@ -782,7 +782,7 @@
         <input type="button" id="save" value="save">
         <br>
         <input type="text" id="title" placeholder="title">
-        <input type="file" name="img" id="inputImage">
+        <input type="file" name="imgs[]" id="inputImage" multiple=true>
         <ol class="searches" id="sortable">
           <li class="ui-state-default">
             drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
@@ -795,6 +795,7 @@
         <br>
         <div class="carousel">
         </div>
+
       </div>
       <!--지도 끝-->
 
@@ -1044,6 +1045,10 @@
 <!--jquery ui cdn-->
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!--dropzone-->
+<script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
 
 <!-- Footer Scripts
 ============================================= -->
@@ -1343,20 +1348,16 @@
         input.name='title';
         input.value = title;
         $(form).append(input);
-        $('#body').append(form);
 
         //image
         var image=document.getElementById("inputImage");
-        console.log(image);
         $(form).append(image);
-        $('#body').append(form);
 
         var input=document.createElement("input");
         input.type="hidden";
         input.name='place_ids';
         input.value = p_id;
         $(form).append(input);
-        $('#body').append(form);
 
         var input=document.createElement("input");
         input.type="hidden";
