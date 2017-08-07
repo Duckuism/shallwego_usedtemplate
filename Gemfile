@@ -6,9 +6,10 @@ git_source(:github) do |repo_name|
 end
 gem 'chosen-rails'
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'mailboxer'
 gem 'bootstrap-sass'
-
+gem 'figaro'
 
 # Store image in aws S3
 gem 'fog-aws'

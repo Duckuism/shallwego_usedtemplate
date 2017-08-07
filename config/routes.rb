@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "user/omniauth_callbacks" }
 
   # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
