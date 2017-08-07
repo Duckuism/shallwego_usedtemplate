@@ -20,18 +20,6 @@
  *= require mailbox
  *= require welcome
 
-
-
- *= require style
-
  *= require_tree .
  *= require_self
  */
-
-@import './sass/variables.scss';
-@import 'sass';
-@import 'less';
-@import 'bootstrap';
-@import 'application.css.scss';
-@import 'sass/blog.scss';
-@import url('blog') all;
