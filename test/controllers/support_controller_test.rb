@@ -1,27 +1,27 @@
 require 'test_helper'
 
 class SupportControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
+  test "should get faq_new" do
     get support_new_url
     assert_response :success
   end
 
-  test "should get create" do
+  test "should get foreigner_concept" do
     get support_create_url
     assert_response :success
   end
 
-  test "should get index" do
+  test "should get foreigner_detail" do
     get support_index_url
     assert_response :success
   end
 
-  test "should get show" do
+  test "should get foreigner_list" do
     get support_show_url
     assert_response :success
   end
 
-  test "should get edit" do
+  test "should get course_edit" do
     get support_edit_url
     assert_response :success
   end

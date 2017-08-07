@@ -25,6 +25,17 @@
   ============================================= -->
   <title>Conditional Form | Canvas</title>
 
+  <style>
+    /*지도 height 없으면 지도 사라짐*/
+    #map {
+      height: 50%;
+      width: 50%;
+      border: solid 1px;
+      min-height: 300px;
+      min-width: 300px;
+    }
+  </style>
+
 </head>
 
 <body class="stretched">
@@ -763,6 +774,30 @@
 
       </div>
 
+      <!-- 지도 시작 -->
+      <div id="map"></div>
+
+      <div id="main_div">
+        <input type="button" id="addbtn" value="add">
+        <input type="button" id="save" value="save">
+        <br>
+        <input type="text" id="title" placeholder="title">
+        <input type="file" name="img" id="inputImage">
+        <ol class="searches" id="sortable">
+          <li class="ui-state-default">
+            drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
+            <input type="button" class="delbtn" value="delete">
+            <input type="hidden" class="p_id">
+            <input type="hidden" class="p_name">
+          </li>
+        </ol>
+        <br>
+        <br>
+        <div class="carousel">
+        </div>
+      </div>
+      <!--지도 끝-->
+
     </div>
 
   </section><!-- #content end -->
@@ -1006,6 +1041,10 @@
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/js/plugins.js"></script>
 
+<!--jquery ui cdn-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 <!-- Footer Scripts
 ============================================= -->
 <script type="text/javascript" src="/assets/js/functions.js"></script>
@@ -1062,7 +1101,284 @@
         });
     });
 
+    // 지도 script
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    var map;
+    var markers = [];
+    var autocompletes = [];
+    var search_count = 1;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 37.449610, lng: 126.653084},
+            zoom: 16
+        });
+
+        var this_li = $("#pac-input").parent();
+
+        var input = /** @type {!HTMLInputElement} */(
+            document.getElementById('pac-input'));
+
+        //지도안에 검색창 집어넣기 map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+        autocompletes.push(autocomplete);
+
+        var infowindow = new google.maps.InfoWindow();
+
+        //마커 생성
+        var marker = new google.maps.Marker({
+            map: map
+        });
+        marker.setVisible(false);
+        markers.push(marker);
+
+        autocomplete.addListener('place_changed', function () {
+            var this_p_id = this_li.children(".p_id");
+            var this_p_name = this_li.children(".p_name");
+
+            infowindow.close();
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                // User entered the name of a Place that was not suggested and
+                // pressed the Enter key, or the Place Details request failed.
+                window.alert("No details available for input: '" + place.name + "'");
+                return;
+            }
+            this_p_id.val(place.place_id);
+            this_p_name.val(place.name);
+
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17);  // Why 17? Because it looks good.
+            }
+
+            //마커 아이콘지정, 좌표 설정
+            marker.setIcon(/** @type {google.maps.Icon} */({
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
+            }));
+            marker.setPosition(place.geometry.location);
+            marker.setVisible(true);
+
+//관련 사진 로드
+//            var photos = place.photos;
+//
+//            for(var i=0; i<photos.length; i++){
+//                $(".carousel").append('<a class="carousel-item" href="#one!">' +
+//                    '<img src='+ photos[i].getUrl({'maxWidth': 200, 'maxHeight': 200})+'>' +
+//                    '</a>');
+//            }
+
+            $('.carousel').carousel();
+
+            var address = '';
+            if (place.address_components) {
+                address = [
+                    (place.address_components[0] && place.address_components[0].short_name || ''),
+                    (place.address_components[1] && place.address_components[1].short_name || ''),
+                    (place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+            }
+
+            //정보 표시
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+            infowindow.open(map, marker);
+        });
+    }
+
+
+    //검색창 추가
+    $(document).on('click', '#addbtn', (function () {
+        var btn_id = "pac-input" + search_count;
+        search_count++;
+        $('.searches').append('<li class="ui-state-default">' +
+            'drag<input id="' + btn_id + '" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
+            '<input type="button" class="delbtn" value="delete">' +
+            '<input type="hidden" class="p_id">'+
+            '<input type="hidden" class="p_name">'+
+            '</li>');
+        var for_select = '#'+btn_id;
+        var this_li = $(for_select).parent();
+
+        var input = /** @type {!HTMLInputElement} */(
+            document.getElementById(btn_id));
+
+        //지도안에 검색창 집어넣기 map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+        autocompletes.push(autocomplete);
+
+        var infowindow = new google.maps.InfoWindow();
+
+        //마커 생성
+        var marker = new google.maps.Marker({
+            map: map
+        });
+        marker.setVisible(false);
+        markers.push(marker);
+
+        autocomplete.addListener('place_changed', function () {
+            var this_p_id = this_li.children(".p_id");
+            var this_p_name = this_li.children(".p_name");
+
+            infowindow.close();
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                // User entered the name of a Place that was not suggested and
+                // pressed the Enter key, or the Place Details request failed.
+                window.alert("No details available for input: '" + place.name + "'");
+                return;
+            }
+
+            this_p_id.val(place.place_id);
+            this_p_name.val(place.name);
+
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17);  // Why 17? Because it looks good.
+            }
+
+            //마커 아이콘 생성 및 좌표 설정
+            marker.setIcon(/** @type {google.maps.Icon} */({
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
+            }));
+            marker.setPosition(place.geometry.location);  //이부분 때문에 정보창이 약간 옆으로 밀리는 듯
+            marker.setVisible(true);
+
+            var address = '';
+            if (place.address_components) {
+                address = [
+                    (place.address_components[0] && place.address_components[0].short_name || ''),
+                    (place.address_components[1] && place.address_components[1].short_name || ''),
+                    (place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+            }
+
+            //정보 표시
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+            infowindow.open(map, marker);
+        });
+    }));
+
+    //검색창 삭제
+    $(document).on('click', '.delbtn', function () {
+        var index = $(this).parent().index();
+        //마커가 있으면
+        if (markers[index] != undefined) {
+            markers[index].setMap(null);
+            markers.splice(index, 1);
+            autocompletes.splice(index,1);
+        }
+        $(this).parent().remove();
+        console.log(markers);
+    });
+    ;
+    //정보 표시
+    $(document).on('click', '#info', function () {
+        var s = $(".p_id");
+        var n = $(".p_name");
+        var length = s.length
+        for(var i=0; i< length;i++) {
+            console.log(s[i]);
+            console.log(n[i]);
+        }
+    });
+
+    //저장
+    $(document).on('click', '#save', function () {
+        var place_ids = "";
+        var place_names ="";
+        var title = $("#title").val();
+        var ids = $(".p_id");
+        var names = $(".p_name");
+        var length = ids.length;
+        for(var i=0; i< length;i++) {
+            place_ids += ids[i].value+",";
+            place_names += names[i].value+",";
+        }
+        sendPost('create', title ,place_ids, place_names)
+    });
+
+    function enter(e){
+        if (window.event) {
+            key = window.event.keyCode;
+        } else if (e) {
+            key = e.which;
+        }
+        if(key == 13){
+            return false
+        }
+    }
+
+    //post 전송
+    function sendPost(url , title, p_id, p_name){
+
+        var form=document.createElement("form");
+        form.name='tempPost';
+        form.method='post';
+        form.action=url;
+        form.enctype="multipart/form-data";
+        document.body.appendChild(form);
+
+        var input=document.createElement("input");
+        input.type="hidden";
+        input.name='title';
+        input.value = title;
+        $(form).append(input);
+        $('#body').append(form);
+
+        //image
+        var image=document.getElementById("inputImage");
+        console.log(image);
+        $(form).append(image);
+        $('#body').append(form);
+
+        var input=document.createElement("input");
+        input.type="hidden";
+        input.name='place_ids';
+        input.value = p_id;
+        $(form).append(input);
+        $('#body').append(form);
+
+        var input=document.createElement("input");
+        input.type="hidden";
+        input.name='place_names';
+        input.value = p_name;
+        $(form).append(input);
+        $('#body').append(form);
+
+        form.submit();
+
+        //input.value= jQuery.JSONToString(object);
+    }
+
+    //divtag 옮기기
+    $( function() {
+        $("#sortable").sortable();
+        $("#sortable").disableSelection();
+    } );
+
 </script>
+<!--지도 api 사용하기 위한 코드-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARFVHKNuUhIbya3S0o0ieuYUI0q5OHz_I&libraries=places&callback=initMap" async defer></script>
 
 </body>
 </html>

@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root 'welcome#index'
   # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
@@ -20,34 +19,39 @@ Rails.application.routes.draw do
     end
   end
 
+
   ## 가져온 템플릿 정상 작동 확인을 위해 주소창에서 조회하기 위해 만든 routes.
   ## 백엔드 개발시에는 다 삭제하고 resource로 restful하게 만들어주세용.
 
-  get 'home/index'
+  get 'home/foreigner_detail'
 
   get 'home/login_register'
 
+  get 'home/index'
 
-  get 'support/new'
 
-  get 'support/create'
+  get 'support/faq_new'
 
-  get 'support/index'
+  get 'support/support_index'
 
-  get 'support/show'
+  get 'support/faq_detail'
 
-  get 'support/edit'
+  get 'support/faq_list'
+
+  get 'support/faq_edit'
 
   get 'support/update'
 
   get 'support/delete'
 
 
-  get 'course/new'
+  get 'course/course_new'
 
-  get 'course/create'
+  get 'course/foreigner_hangout_concept'
+  post 'course/create'
 
-  get 'course/index'
+  get 'course/course_edit'
+  get 'course/index/:id' => 'course#index'
 
   get 'course/show'
 
@@ -57,44 +61,52 @@ Rails.application.routes.draw do
 
   get 'course/delete'
 
+  get 'course/course_list'
+
+  get 'course/course_detail'
 
 
-  get 'local/new'
+  get 'local/faq_new'
 
-  get 'local/create'
+  get 'local/foreigner_hangout_concept'
 
-  get 'local/index'
+  get 'local/local_detail'
 
-  get 'local/show'
+  get 'local/local_list'
 
-  get 'local/edit'
+  get 'local/course_edit'
 
   get 'local/update'
 
   get 'local/delete'
 
 
-  get 'foreigner/new'
+  get 'foreigner/faq_new'
 
-  get 'foreigner/create'
+  get 'foreigner/foreigner_hangout_concept'
 
-  get 'foreigner/index'
+  get 'foreigner/foreigner_detail'
 
-  get 'foreigner/show'
+  get 'foreigner/foreigner_list'
 
-  get 'foreigner/edit'
+  get 'foreigner/course_edit'
 
   get 'foreigner/update'
 
   get 'foreigner/delete'
 
+  get 'foreigner/foreigner_list'
+
+  get 'foreigner/foreigner_detail'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # root "home#index"
+  root "home#index"
 
   resource :course
 
   resource :foreigner
 
   resource :local
+
 
 end

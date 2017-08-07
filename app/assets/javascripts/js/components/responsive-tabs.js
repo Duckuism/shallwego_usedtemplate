@@ -292,7 +292,7 @@
             this.state = 'accordion';
         }
 
-        // If the new state is different from the old state
+        // If the course_new state is different from the old state
         if(this.state !== oldState) {
             // If so, the state activate trigger must be called
             this.$element.trigger('tabs-activate-state', {oldState: oldState, newState: this.state});
@@ -474,7 +474,7 @@
                 return i;
             }
         }
-        // If none is found return a negative index
+        // If none is found return a negative foreigner_detail
         return -1;
     };
 
@@ -517,7 +517,7 @@
                 return i;
             }
         }
-        // No tabs have been found, return negative index
+        // No tabs have been found, return negative foreigner_detail
         return -1;
     };
 

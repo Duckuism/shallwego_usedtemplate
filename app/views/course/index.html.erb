@@ -719,7 +719,7 @@
 
           <div class="col_three_fourth">
             <div class="entry-image nobottommargin">
-              <a href="#"><img src="/assets/events/1.jpg" alt="Event Single"></a>
+              <a href="#"><%= image_tag @course.image.main.url %></a>
               <div class="entry-overlay">
                 <span class="hidden-xs">Starts in: </span><div id="event-countdown" class="countdown"></div>
               </div>
@@ -746,11 +746,13 @@
 
           <div class="col_three_fourth">
 
-            <h3>Details</h3>
+            <h3></h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, voluptatum, amet, eius esse sit praesentium similique tenetur accusamus deserunt modi dignissimos debitis consequatur facere unde sint quasi quae architecto eum!</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nesciunt, sapiente, distinctio obcaecati dolores perspiciatis eveniet adipisci repellendus consequatur ab officiis ipsa laudantium! Provident expedita odio iste corporis nam natus illum. Cupiditate, quis libero distinctio reiciendis quos adipisci eius animi.</p>
+            <% @course.locations.each do |l| %>
+                <p>
+                  <input type="button" class="place" id="<%=l.place_id%>" value="<%= l.name %>">
+                </p>
+            <% end %>
 
             <h4>Inclusions</h4>
 
@@ -784,7 +786,7 @@
 
             <h4>Location</h4>
 
-            <section id="event-location" class="gmap" style="height: 300px;"></section>
+            <section id="map" class="gmap" style="height: 300px;"></section>
 
 
           </div>
@@ -1112,27 +1114,61 @@
         $('#event-countdown').countdown({until: eventStartDate});
     });
 
-    jQuery('#event-location').gMap({
-        address: 'Ibiza, Spain',
-        maptype: 'ROADMAP',
-        zoom: 15,
-        markers: [
-            {
-                address: "Ibiza, Spain"
-            }
-        ],
-        doubleclickzoom: false,
-        controls: {
-            panControl: true,
-            zoomControl: true,
-            mapTypeControl: true,
-            scaleControl: false,
-            streetViewControl: false,
-            overviewMapControl: false
-        }
-    });
 
+    //지도
+    var map;
+    var geocoder;
+    var infowindows;
+    var marker;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: {lat: 37.449610, lng: 126.653084}
+        });
+        geocoder = new google.maps.Geocoder;
+        infowindow = new google.maps.InfoWindow;
+    }
+
+    $(document).on('click', '.place', function geocodePlaceId() {
+        var placeId = $(this).attr("id");
+        var placeName = $(this).attr("value");
+        geocoder.geocode({'placeId': placeId}, function (results, status) {
+            if (status === 'OK') {
+                if (results[0]) {
+                    map.setZoom(16);
+                    map.setCenter(results[0].geometry.location);
+
+                    if(marker != undefined) {
+                        marker.setMap(null);
+                    }
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+
+                    var address = '';
+                    if (results[0].address_components) {
+                        address = [
+                            (results[0].address_components[0] && results[0].address_components[0].short_name || ''),
+                            (results[0].address_components[1] && results[0].address_components[1].short_name || ''),
+                            (results[0].address_components[2] && results[0].address_components[2].short_name || '')
+                        ].join(' ');
+                    }
+                    //정보 표시
+                    infowindow.setContent('<div><strong>' + placeName + '</strong><br>' + address);
+                    infowindow.open(map, marker);
+                } else {
+                    window.alert('No results found');
+                }
+            } else {
+                window.alert('Geocoder failed due to: ' + status);
+            }
+        });
+    });
 </script>
+<!--지도 api 사용하기 위한 코드-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARFVHKNuUhIbya3S0o0ieuYUI0q5OHz_I&libraries=places&callback=initMap" async defer></script>
 
 </body>
 </html>

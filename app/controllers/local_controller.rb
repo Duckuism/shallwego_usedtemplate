@@ -12,7 +12,7 @@ class LocalController < ApplicationController
   def show
   end
 
-  def index
+  def local_detail
   end
 
 

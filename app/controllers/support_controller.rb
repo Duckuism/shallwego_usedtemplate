@@ -1,17 +1,17 @@
 class SupportController < ApplicationController
-  def new
+  def faq_new
   end
 
   def create
   end
 
-  def index
+  def support_index
   end
 
-  def show
+  def faq_detail
   end
 
-  def edit
+  def faq_edit
   end
 
   def update
