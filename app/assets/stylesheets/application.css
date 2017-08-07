@@ -11,9 +11,27 @@
  * It is generally better to create a new file per style scope.
  *
 
+ *= require ./sass/variables
+ *= require_directory ./sass
+ *= require_directory ./css
+ *= require_directory ./less
+
+ *= require conversations
+ *= require mailbox
+ *= require welcome
+
+
 
  *= require style
 
  *= require_tree .
  *= require_self
  */
+
+@import './sass/variables.scss';
+@import 'sass';
+@import 'less';
+@import 'bootstrap';
+@import 'application.css.scss';
+@import 'sass/blog.scss';
+@import url('blog') all;

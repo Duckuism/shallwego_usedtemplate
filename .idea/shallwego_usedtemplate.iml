@@ -10,8 +10,7 @@
     </facet>
   </component>
   <component name="ModuleRunConfigurationManager">
-    <shared />
-    <local>
+    <shared>
       <configuration default="false" name="test: shallwego_usedtemplate" type="RakeRunConfigurationType" factoryName="Rake">
         <module name="shallwego_usedtemplate" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -110,7 +109,8 @@
         <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
         <method />
       </configuration>
-    </local>
+    </shared>
+    <local />
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">

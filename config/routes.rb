@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users
+
+  # mailbox folder routes
+  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+
+
+
+  # conversations
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
+
+
   ## 가져온 템플릿 정상 작동 확인을 위해 주소창에서 조회하기 위해 만든 routes.
   ## 백엔드 개발시에는 다 삭제하고 resource로 restful하게 만들어주세용.
 

@@ -2,7 +2,134 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0157b327-6380-40e9-bf9b-143b66c85b79" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__shallwego_usedtemplate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__shallwego_usedtemplate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/spec__shallwego_usedtemplate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test__shallwego_usedtemplate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/conversations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/mailbox.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/mailbox.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/welcome.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/welcome.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/conversations.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/conversations.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/mailbox.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/mailbox.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/welcome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/mailbox_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/conversations_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/mailbox_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/welcome_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/_conversation.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/_messages.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/course/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/course/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/foreigner/create.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/foreigner/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/foreigner/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/local/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mailbox/_folder_view.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mailbox/_folders.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mailbox/inbox.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mailbox/sent.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mailbox/trash.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/support/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/support/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/support/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/support/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/mailboxer.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170806080427_devise_create_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170806080506_add_name_to_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170806080724_create_mailboxer.mailboxer_engine.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170806080725_add_conversation_optout.mailboxer_engine.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170806080726_add_missing_indices.mailboxer_engine.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20170806080727_add_delivery_tracking_info_to_mailboxer_receipts.mailboxer_engine.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/conversations_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/mailbox_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/welcome_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/user_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shallwego_usedtemplate.iml" afterPath="$PROJECT_DIR$/.idea/shallwego_usedtemplate.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/cable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/cable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-datatable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-datatable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-editable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-editable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-filestyle.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-filestyle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-select.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/components/bs-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/components/bs-editable.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/components/bs-editable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/blog.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/blog.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/content.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/content.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/events.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/events.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/extras.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/extras.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/footer.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/footer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/header.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/helpers.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/helpers.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/layouts.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/layouts.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/mixins.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/pagetitle.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/pagetitle.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/portfolio.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/portfolio.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shop.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shop.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/buttons.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/buttons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/carousel.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/carousel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/clients.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/clients.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/countdown.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/countdown.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/counter-skills.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/counter-skills.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/dividers.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/dividers.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/faqs.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/faqs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/feature-box.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/feature-box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/headings.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/headings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/misc.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/misc.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/overlay.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/overlay.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/pricing.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/pricing.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/process-steps.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/process-steps.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/promo.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/promo.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/social-icons.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/social-icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/styled-icons.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/styled-icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/tabs.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/tabs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/team.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/team.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/testimonials.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/testimonials.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/toggles-accordions.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/toggles-accordions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/youtubebg.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/shortcodes/youtubebg.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/sliders.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/sliders.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/topbar.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/topbar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/typography.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/variables.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sass/widgets.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sass/widgets.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +147,8 @@
       <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="210">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -31,7 +158,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/course/course_list.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,8 +167,8 @@
       <file leaf-file-name="course_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/course_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="529">
+              <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -52,7 +179,107 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="627">
               <caret line="1077" column="16" lean-forward="false" selection-start-line="1077" selection-start-column="16" selection-end-line="1077" selection-end-column="16" />
-              <folding />
+              <folding>
+                <marker date="1502085127000" expanded="true" signature="49380:49399" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49380:49457" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49522:50852" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49604:50834" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49654:50815" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49678:49851" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49699:49826" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49875:50792" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="49896:50095" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="50116:50289" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="50310:50534" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="50490:50495" ph="&amp;" />
+                <marker date="1502085127000" expanded="true" signature="50555:50767" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="50725:50730" ph="&amp;" />
+                <marker date="1502085127000" expanded="true" signature="50938:50994" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51032:59474" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51061:57210" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51074:51142" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51193:57165" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51230:54458" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51269:52181" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51312:52163" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="51482:51487" ph="&amp;" />
+                <marker date="1502085127000" expanded="false" signature="51563:51650" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51651:52143" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="51677:51851" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="52220:52989" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="52276:52971" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="52329:52951" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53037:54442" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53080:54424" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53159:54405" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53204:53568" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53244:53545" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53290:53404" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53448:53520" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53614:53976" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53654:53953" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53700:53812" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="53856:53928" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54022:54384" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54062:54361" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54108:54220" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54264:54336" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54504:57151" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="54553:54574" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54575:55248" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54606:55230" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54660:54913" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="54967:55210" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="55306:56120" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="55407:55412" ph="&amp;" />
+                <marker date="1502085127000" expanded="true" signature="55618:56103" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="55668:56083" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="55970:56062" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="56169:56190" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="56191:57135" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="56222:57117" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="56285:56674" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="56388:56407" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="56408:56525" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="56569:56601" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="56720:57097" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="56818:56837" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="56838:56945" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="56989:57021" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57221:57283" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57311:59437" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57351:59425" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57383:57577" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="57406:57412" ph="©" />
+                <marker date="1502085127000" expanded="true" signature="57625:59411" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57665:59136" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57745:57850" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="57930:58033" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="58111:58210" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="58477:58576" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="58655:58756" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="58834:58933" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="59014:59119" ph="..." />
+                <marker date="1502085127000" expanded="false" signature="59254:59262" ph="·" />
+                <marker date="1502085127000" expanded="false" signature="59340:59348" ph="·" />
+                <marker date="1502085127000" expanded="true" signature="59530:59587" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="59643:59711" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="59857:59919" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="60182:62388" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="60224:60386" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="60492:60749" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="60560:60647" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="60815:62377" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="60980:62369" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="61015:62271" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="61049:62178" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="61198:61266" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="61319:61439" ph="{&quot;map&quot;: map...}" />
+                <marker date="1502085127000" expanded="true" signature="61536:61982" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="61572:61949" ph="[...]" />
+                <marker date="1502085127000" expanded="true" signature="62184:62257" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="62277:62359" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +289,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1502085127000" expanded="true" signature="68442:68736" ph="{...}" />
+                <marker date="1502085127000" expanded="true" signature="68442:68871" ph="..." />
+                <marker date="1502085127000" expanded="true" signature="68773:68858" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,7 +303,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1502085127000" expanded="true" signature="61:1003" ph="do ... end" />
+                <marker date="1502085127000" expanded="true" signature="779:999" ph="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +336,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1502085181000" expanded="true" signature="376:456" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +347,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/course/course_detail.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1951">
-              <caret line="145" column="58" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="145" selection-end-column="58" />
+              <caret line="145" column="58" lean-forward="false" selection-start-line="134" selection-start-column="1" selection-end-line="145" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -278,6 +514,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shallwego_usedtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shallwego_usedtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -553,7 +807,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: shallwego_usedtemplate">
+  <component name="RunManager" selected="JavaScript Debug.login_register">
     <configuration default="false" name="login_register" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://0.0.0.0:3000/home/login_register">
       <method />
     </configuration>
@@ -764,104 +1018,6 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="test: shallwego_usedtemplate" type="RakeRunConfigurationType" factoryName="Rake">
-      <module name="shallwego_usedtemplate" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="spec: shallwego_usedtemplate" type="RakeRunConfigurationType" factoryName="Rake">
-      <module name="shallwego_usedtemplate" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Production: shallwego_usedtemplate" type="RailsRunConfigurationType" factoryName="Rails">
-      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
-      <module name="shallwego_usedtemplate" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Development: shallwego_usedtemplate" type="RailsRunConfigurationType" factoryName="Rails">
-      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
-      <module name="shallwego_usedtemplate" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
-      <method />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Rake.test: shallwego_usedtemplate" />
       <item index="1" class="java.lang.String" itemvalue="Rake.spec: shallwego_usedtemplate" />
@@ -899,7 +1055,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47707000" />
+    <option name="totallyTimeSpent" value="47825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -913,14 +1069,22 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2644135" sideWeight="0.48229548" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2644135" sideWeight="0.51770455" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20079523" sideWeight="0.495116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902583" sideWeight="0.497558" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2644135" sideWeight="0.48229548" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21062271" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762095" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994709" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1169,7 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,14 +1364,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1502085181000" expanded="true" signature="376:456" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1217,7 +1382,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1502085127000" expanded="true" signature="68442:68736" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="68442:68871" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="68773:68858" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1225,7 +1394,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1502085127000" expanded="true" signature="61:1003" ph="do ... end" />
+            <marker date="1502085127000" expanded="true" signature="779:999" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1241,7 +1413,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="1077" column="16" lean-forward="false" selection-start-line="1077" selection-start-column="16" selection-end-line="1077" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1502085127000" expanded="true" signature="49380:49399" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49380:49457" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49522:50852" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49604:50834" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49654:50815" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49678:49851" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49699:49826" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49875:50792" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="49896:50095" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="50116:50289" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="50310:50534" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="50490:50495" ph="&amp;" />
+            <marker date="1502085127000" expanded="true" signature="50555:50767" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="50725:50730" ph="&amp;" />
+            <marker date="1502085127000" expanded="true" signature="50938:50994" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51032:59474" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51061:57210" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51074:51142" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51193:57165" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51230:54458" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51269:52181" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51312:52163" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="51482:51487" ph="&amp;" />
+            <marker date="1502085127000" expanded="false" signature="51563:51650" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51651:52143" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="51677:51851" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="52220:52989" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="52276:52971" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="52329:52951" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53037:54442" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53080:54424" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53159:54405" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53204:53568" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53244:53545" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53290:53404" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53448:53520" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53614:53976" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53654:53953" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53700:53812" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="53856:53928" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54022:54384" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54062:54361" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54108:54220" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54264:54336" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54504:57151" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="54553:54574" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54575:55248" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54606:55230" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54660:54913" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="54967:55210" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="55306:56120" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="55407:55412" ph="&amp;" />
+            <marker date="1502085127000" expanded="true" signature="55618:56103" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="55668:56083" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="55970:56062" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="56169:56190" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="56191:57135" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="56222:57117" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="56285:56674" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="56388:56407" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="56408:56525" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="56569:56601" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="56720:57097" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="56818:56837" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="56838:56945" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="56989:57021" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57221:57283" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57311:59437" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57351:59425" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57383:57577" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="57406:57412" ph="©" />
+            <marker date="1502085127000" expanded="true" signature="57625:59411" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57665:59136" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57745:57850" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="57930:58033" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="58111:58210" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="58477:58576" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="58655:58756" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="58834:58933" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="59014:59119" ph="..." />
+            <marker date="1502085127000" expanded="false" signature="59254:59262" ph="·" />
+            <marker date="1502085127000" expanded="false" signature="59340:59348" ph="·" />
+            <marker date="1502085127000" expanded="true" signature="59530:59587" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="59643:59711" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="59857:59919" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="60182:62388" ph="..." />
+            <marker date="1502085127000" expanded="true" signature="60224:60386" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="60492:60749" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="60560:60647" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="60815:62377" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="60980:62369" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="61015:62271" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="61049:62178" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="61198:61266" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="61319:61439" ph="{&quot;map&quot;: map...}" />
+            <marker date="1502085127000" expanded="true" signature="61536:61982" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="61572:61949" ph="[...]" />
+            <marker date="1502085127000" expanded="true" signature="62184:62257" ph="{...}" />
+            <marker date="1502085127000" expanded="true" signature="62277:62359" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1256,7 +1528,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/course/course_detail.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1951">
-          <caret line="145" column="58" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="145" selection-end-column="58" />
+          <caret line="145" column="58" lean-forward="false" selection-start-line="134" selection-start-column="1" selection-end-line="145" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1264,15 +1536,15 @@
     <entry file="file://$PROJECT_DIR$/app/views/course/course_list.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/course_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="529">
+          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding />
         </state>
       </provider>
