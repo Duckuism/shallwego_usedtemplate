@@ -20,4 +20,9 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-.idea
+/public/assets
+/public/uploads
+/.idea
+/.idea *
+/public/system/*
+.rvmrc
