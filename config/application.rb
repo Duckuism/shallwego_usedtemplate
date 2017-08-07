@@ -24,7 +24,7 @@ module SHALLWEGO
         :domain     =>  'mail.google.com',
         :port       =>  587,
         :user_name  =>  'jjbs0408@gmail.com',
-        :password   =>  'qudgns135@',
+        :password   =>  '',
         :authentication =>  'login',
         :enable_starttls_auto => true
     }
