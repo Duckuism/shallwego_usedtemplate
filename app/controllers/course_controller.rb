@@ -59,10 +59,4 @@ class CourseController < ApplicationController
     redirect_to :back
   end
 
-
-
-  def upload_test
-    @img = params[:file]
-  end
-
 end
