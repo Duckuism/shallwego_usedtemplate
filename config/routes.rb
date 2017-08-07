@@ -29,7 +29,6 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-
   get 'support/faq_new'
 
   get 'support/support_index'
@@ -48,14 +47,10 @@ Rails.application.routes.draw do
   get 'course/course_new'
 
   get 'course/foreigner_hangout_concept'
+
   post 'course/create'
 
   get 'course/course_edit'
-  get 'course/index/:id' => 'course#index'
-
-  get 'course/show'
-
-  get 'course/edit'
 
   get 'course/update'
 
@@ -63,7 +58,7 @@ Rails.application.routes.draw do
 
   get 'course/course_list'
 
-  get 'course/course_detail'
+  get 'course/course_detail/:id' => 'course#course_detail'
 
 
   get 'local/faq_new'

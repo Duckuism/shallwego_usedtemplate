@@ -27,27 +27,20 @@ class CourseController < ApplicationController
     end
     @l.each(&:save)
 
-    redirect_to '/course/show'
+    redirect_to '/course/course_list'
   end
 
   ##READ
-  def show
+  def course_list
     @courses = Course.all
   end
 
-  def index
+  def course_detail
     @course = Course.find(params[:id])
   end
 
-  def course_list
-  end
-
-  def course_detail
-  end
-
-
   ##UPDATE
-  def edit
+  def course_edit
     @course = Course.find(params[:id])
 
   end
