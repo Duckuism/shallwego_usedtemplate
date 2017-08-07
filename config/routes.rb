@@ -28,8 +28,14 @@ Rails.application.routes.draw do
   get 'course/course_new'
 
   get 'course/foreigner_hangout_concept'
+  post 'course/create'
 
   get 'course/course_edit'
+  get 'course/index/:id' => 'course#index'
+
+  get 'course/show'
+
+  get 'course/edit'
 
   get 'course/update'
 
@@ -81,5 +87,6 @@ Rails.application.routes.draw do
   resource :foreigner
 
   resource :local
+
 
 end
