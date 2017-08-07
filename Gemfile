@@ -8,7 +8,7 @@ gem 'chosen-rails'
 gem 'devise'
 gem 'mailboxer'
 gem 'bootstrap-sass'
-
+gem 'rails_db'
 
 # #multi-images upload
 # gem 'dropzonejs-rails'
