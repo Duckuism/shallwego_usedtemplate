@@ -71,8 +71,8 @@
 	
 	$.Slideshow.defaults 		= {
 		// animation types:
-		// "sides" : new slides will slide in from left / right
-		// "center": new slides will appear in the center
+		// "sides" : course_new slides will slide in from left / right
+		// "center": course_new slides will appear in the center
 		animation			: 'sides', // sides || center
 		// if true the slider will automatically slide, and it will only stop if the user clicks on a thumb
 		autoplay			: false,
@@ -101,7 +101,7 @@
 			this.$imgItems.css( 'opacity', 0 );
 			this.$imgItems.find('div.ei-title > *').css( 'opacity', 0 );
 			
-			// index of current visible slider
+			// foreigner_detail of current visible slider
 			this.current		= 0;
 			
 			var _self			= this;
@@ -121,7 +121,7 @@
 				// configure thumbs container
 				_self._initThumbs();
 				
-				// show first
+				// faq_detail first
 				_self.$imgItems.eq( _self.current ).css({
 					'opacity' 	: 1,
 					'z-index'	: 10
@@ -237,7 +237,7 @@
 				'width'		: 100 / this.itemsCount + '%'
 			});
 			
-			// set the max-width of the slider and show it
+			// set the max-width of the slider and faq_detail it
 			this.$sliderthumbs.css( 'max-width', this.options.thumbMaxWidth * this.itemsCount + 'px' ).show();
 			
 		},
@@ -278,7 +278,7 @@
 				preCSS			= {zIndex	: 10},
 				animCSS			= {opacity	: 1};
 			
-			// new slide will slide in from left or right side
+			// course_new slide will slide in from left or right side
 			if( this.options.animation === 'sides' ) {
 				
 				preCSS.left		= ( pos > this.current ) ? -1 * this.elWidth : this.elWidth;
@@ -310,7 +310,7 @@
 				// animate next slide in
 				$nextSlide.css( preCSS ).stop().animate( animCSS, this.options.speed, this.options.easing ),
 				
-				// "sliding div" moves to new position
+				// "sliding div" moves to course_new position
 				this.$sliderElem.stop().animate({
 					left	: this.$thumbs.eq( pos ).position().left
 				}, this.options.speed )

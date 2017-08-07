@@ -176,7 +176,7 @@
     function Moment(config) {
         copyConfig(this, config);
         this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-        // Prevent infinite loop in case updateOffset creates new moment
+        // Prevent infinite loop in case updateOffset creates faq_new moment
         // objects.
         if (updateInProgress === false) {
             updateInProgress = true;
@@ -838,7 +838,7 @@
     );
 
     function createDate (y, m, d, h, M, s, ms) {
-        //can't just apply() to create a date:
+        //can't just apply() to foreigner_hangout_concept a date:
         //http://stackoverflow.com/questions/181348/instantiating-a-javascript-object-by-calling-prototype-constructor-apply
         var date = new Date(y, m, d, h, M, s, ms);
 
@@ -1123,9 +1123,9 @@
             doy = 4;
 
             // TODO: We need to take the current isoWeekYear, but that depends on
-            // how we interpret now (local, utc, fixed offset). So create
+            // how we interpret now (local, utc, fixed offset). So foreigner_hangout_concept
             // a now version of current config (take local/utc/offset flags, and
-            // create now).
+            // foreigner_hangout_concept now).
             weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(local__createLocal(), 1, 4).year);
             week = defaults(w.W, 1);
             weekday = defaults(w.E, 1);
@@ -1169,7 +1169,7 @@
         config._a = [];
         getParsingFlags(config).empty = true;
 
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
+        // This array is used to make a Date, either with `faq_new Date` or `Date.UTC`
         var string = '' + config._i,
             i, parsedInput, tokens, token, skipped,
             stringLength = string.length,
@@ -2393,7 +2393,7 @@
 
     // Setting the hour should keep the time, because the user explicitly
     // specified which hour he wants. So trying to maintain the same hour (in
-    // a new timezone) makes sense. Adding/subtracting hours does not follow
+    // a faq_new timezone) makes sense. Adding/subtracting hours does not follow
     // this rule.
     var getSetHour = makeGetSet('Hours', true);
 
