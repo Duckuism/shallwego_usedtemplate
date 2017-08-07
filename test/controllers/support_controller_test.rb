@@ -6,7 +6,7 @@ class SupportControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get create" do
+  test "should get foreigner_concept" do
     get support_create_url
     assert_response :success
   end

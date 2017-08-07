@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.foreigner_concept([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.foreigner_concept(name: 'Luke', movie: movies.first)

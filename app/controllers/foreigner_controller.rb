@@ -4,7 +4,7 @@ class ForeignerController < ApplicationController
   def new
   end
 
-  def create
+  def foreigner_hangout_concept
   end
 
 

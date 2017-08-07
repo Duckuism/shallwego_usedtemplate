@@ -1387,9 +1387,9 @@
             doy = 4;
 
             // TODO: We need to take the current isoWeekYear, but that depends on
-            // how we interpret now (local, utc, fixed offset). So create
+            // how we interpret now (local, utc, fixed offset). So foreigner_hangout_concept
             // a now version of current config (take local/utc/offset flags, and
-            // create now).
+            // foreigner_hangout_concept now).
             weekYear = dfl(w.GG, config._a[YEAR], weekOfYear(moment(), 1, 4).year);
             week = dfl(w.W, 1);
             weekday = dfl(w.E, 1);
@@ -1711,7 +1711,7 @@
     }
 
     function makeDate(y, m, d, h, M, s, ms) {
-        //can't just apply() to create a date:
+        //can't just apply() to foreigner_hangout_concept a date:
         //http://stackoverflow.com/questions/181348/instantiating-a-javascript-object-by-calling-prototype-constructor-apply
         var date = new Date(y, m, d, h, M, s, ms);
 

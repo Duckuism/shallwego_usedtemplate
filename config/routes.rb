@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'home/login_register'
 
+  get 'home/index'
+
 
   get 'support/faq_new'
 
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
 
   get 'course/course_new'
 
-  get 'course/create'
+  get 'course/foreigner_hangout_concept'
 
   get 'course/course_edit'
 
@@ -40,7 +42,7 @@ Rails.application.routes.draw do
 
   get 'local/faq_new'
 
-  get 'local/create'
+  get 'local/foreigner_hangout_concept'
 
   get 'local/local_detail'
 
@@ -55,7 +57,7 @@ Rails.application.routes.draw do
 
   get 'foreigner/faq_new'
 
-  get 'foreigner/create'
+  get 'foreigner/foreigner_hangout_concept'
 
   get 'foreigner/foreigner_detail'
 
