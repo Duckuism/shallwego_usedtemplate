@@ -15,6 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.text :introduce
       t.string :image
       # 자기소개,프로필사진
+      t.boolean :local_foreigner
 
       ## Recoverable
       t.string   :reset_password_token
