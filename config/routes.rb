@@ -59,7 +59,6 @@ Rails.application.routes.draw do
 
   get 'course/course_detail/:id' => 'course#course_detail'
 
-
   get 'local/faq_new'
 
   get 'local/foreigner_hangout_concept'
