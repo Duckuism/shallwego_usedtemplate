@@ -27,12 +27,34 @@
 
   <style>
     /*지도 height 없으면 지도 사라짐*/
+    li {
+      list-style-type: none;
+    }
     #map {
-      height: 50%;
-      width: 50%;
+      height: 100%;
+      width: 100%;
       border: solid 1px;
       min-height: 300px;
       min-width: 300px;
+    }
+    .map-right {
+      float: right;
+    }
+    .map-left-event {
+      float: left;
+      padding-left: 0px;
+    }
+    .map-time {
+      padding-left: 0px;
+    }
+    .map-location {
+      padding-left: 0px;
+    }
+    .map-events {
+      padding-left: 0px;
+    }
+    .map-delete {
+      padding: 1.5%;
     }
   </style>
 
@@ -54,7 +76,7 @@
 
       <div class="container clearfix">
 
-        <div class="col_half nobottommargin">
+        <div class="col-md-12 nobottommargin">
 
           <h3>Conditional Quote Form</h3>
 
@@ -62,53 +84,74 @@
 
             <div class="col_full">
               <label for="form-condition-1">Enter Title</label>
-              <input type="text" class="sm-form-control required" id="form-condition-1" name="form-condition-1" value="">
+              <input type="text" class="sm-form-control required" id="form-condition-1" name="form-condition-1" value="" style="width:50%">
             </div>
 
             <div class="col_full" id="form-condition-2-wrap" style="display:none;">
               <label for="form-condition-2">Enter Content</label>
-              <input type="text" class="sm-form-control required" id="form-condition-2" name="form-condition-2" value="">
+              <input type="text" class="sm-form-control required" id="form-condition-2" name="form-condition-2" value="" style="width:50%">
             </div>
 
             <div class="col_full" id="form-condition-3-wrap" style="display:none;">
               <label for="form-condition-3">Enter Limit Person</label>
-              <input type="number" class="sm-form-control required number" id="form-condition-3" name="form-condition-3" value="">
+              <input type="number" class="sm-form-control required number" id="form-condition-3" name="form-condition-3" value="" style="width:50%">
             </div>
 
             <div class="col_full" id="form-condition-4-wrap" style="display:none;">
-              <label for="form-condition-4">Select Start Date And End Date</label>
-              <input type="date" class="sm-form-control required date" id="form-condition-4" name="form-condition-4" value="">
-              ~
-              <input type="date" class="sm-form-control required date" id="form-condition-4-end" name="form-condition-4" value="">
+              <label for="form-condition-4">Select Start Date</label>
+              <input type="date" class="sm-form-control required date" id="form-condition-4" name="form-condition-4" value="" style="width:50%">
+              <label>End Date</label>
+              <input type="date" class="sm-form-control required date" id="form-condition-4-end" name="form-condition-4" value="" style="width:50%">
             </div>
 
-            <div class="col_full" , id="form-condition-5-wrap" style="display:none;">
+            <div class="col_full" id="form-condition-5-wrap" style="display: none;">
+              <input type="file" class="required sm-form-control" name="imgs[]" id="inputImage" multiple=true style="width:50%">
+            </div>
+
+            <div class="col_full" id="form-condition-6-wrap" style="display:none;">
               <!-- 지도 시작 -->
-              <div id="map"></div>
+              <div class="map-right">
+                <div id="map"></div>
+              </div>
 
-              <div id="main_div">
-                <input class="button button-3d nomargin" type="button" id="addbtn" value="add">
-                <br>
-                <input type="file" class="required sm-form-control" name="imgs[]" id="inputImage" multiple=true>
-                <ol class="searches" id="sortable">
-                  <li class="ui-state-default">
-                    drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
-                    <input type="button" class="button button-3d nomargin" value="delete">
-                    <input type="hidden" class="p_id">
-                    <input type="hidden" class="p_name">
-                  </li>
-                </ol>
-                <br>
-                <br>
-                <div class="carousel">
+              <div class="map-left-event col-md-8">
+                <input class="button button-border button-border-thin button-aqua" type="button" id="addbtn" value="add">
+
+                <div id="main_div">
+                  <br>
+                  <ul class="searches col_full" id="sortable">
+                    <li>
+                      <div class="map-location col-md-6">
+                        <div><label>Location</label></div>
+                        <input class="sm-form-control" id="pac-input" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
+                        <input type="hidden" class="p_id">
+                        <input type="hidden" class="p_name">
+                      </div>
+                      <div class="map-time col-md-4">
+                        <div><label>Time</label></div>
+                        <input class="sm-form-control timing" type="text">
+                      </div>
+                      <div class="map-events col-md-8">
+                        <div><label>Event</label></div>
+                        <input class="sm-form-control event" type="text">
+                      </div>
+                      <div class="map-delete col-md-4">
+                        <div><label></label></div>
+                        <input type="button" class="button button-border button-border-thin button-red delbtn" value="delete">
+                      </div>
+                    </li>
+                  </ul>
+                  <br>
+                  <br>
+                  <div class="carousel">
+                  </div>
                 </div>
-
               </div>
               <!--지도 끝-->
             </div>
 
-            <div class="col_full" id="form-condition-submit">
-              <input type="button" class="button button-3d nomargin" id="save">Send Quote</input>
+            <div class="col_full" id="form-condition-submit" style="padding-top: 20px">
+              <a type="button" class="button button-border button-rounded button-fill button-aqua" id="save"><span>Course Save</span></a>
             </div>
 
           </form>
@@ -416,9 +459,93 @@
             }
         });
 
-        $('#form-condition-4').change(function () {
-            if (conditionValidator.element("#form-condition-4") === true) {
+        $('#form-condition-4-end').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-4-end") === true) {
                 $('#form-condition-5-wrap').fadeIn();
+                $('#form-condition-6-wrap').fadeIn();
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.449610, lng: 126.653084},
+                    zoom: 16
+                });
+
+                var this_li = $("#pac-input").parent();
+
+                var input = /** @type {!HTMLInputElement} */(
+                    document.getElementById('pac-input'));
+
+                //지도안에 검색창 집어넣기 map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                var autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.bindTo('bounds', map);
+                autocompletes.push(autocomplete);
+
+                var infowindow = new google.maps.InfoWindow();
+
+                //마커 생성
+                var marker = new google.maps.Marker({
+                    map: map
+                });
+                marker.setVisible(false);
+                markers.push(marker);
+
+                autocomplete.addListener('place_changed', function () {
+                    var this_p_id = this_li.children(".p_id");
+                    var this_p_name = this_li.children(".p_name");
+
+                    infowindow.close();
+                    var place = autocomplete.getPlace();
+                    if (!place.geometry) {
+                        // User entered the name of a Place that was not suggested and
+                        // pressed the Enter key, or the Place Details request failed.
+                        window.alert("No details available for input: '" + place.name + "'");
+                        return;
+                    }
+                    this_p_id.val(place.place_id);
+                    this_p_name.val(place.name);
+
+                    // If the place has a geometry, then present it on a map.
+                    if (place.geometry.viewport) {
+                        map.fitBounds(place.geometry.viewport);
+                    } else {
+                        map.setCenter(place.geometry.location);
+                        map.setZoom(17);  // Why 17? Because it looks good.
+                    }
+
+                    //마커 아이콘지정, 좌표 설정
+                    marker.setIcon(/** @type {google.maps.Icon} */({
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(35, 35)
+                    }));
+                    marker.setPosition(place.geometry.location);
+                    marker.setVisible(true);
+
+//관련 사진 로드
+//            var photos = place.photos;
+//
+//            for(var i=0; i<photos.length; i++){
+//                $(".carousel").append('<a class="carousel-item" href="#one!">' +
+//                    '<img src='+ photos[i].getUrl({'maxWidth': 200, 'maxHeight': 200})+'>' +
+//                    '</a>');
+//            }
+
+                    $('.carousel').carousel();
+
+                    var address = '';
+                    if (place.address_components) {
+                        address = [
+                            (place.address_components[0] && place.address_components[0].short_name || ''),
+                            (place.address_components[1] && place.address_components[1].short_name || ''),
+                            (place.address_components[2] && place.address_components[2].short_name || '')
+                        ].join(' ');
+                    }
+
+                    //정보 표시
+                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+                    infowindow.open(map, marker);
+                });
             } else {
                 $('#form-condition-5-wrap').fadeOut();
             }
@@ -426,25 +553,20 @@
 
         $('#form-condition-5').bind('input propertychange', function () {
             if (conditionValidator.element("#form-condition-5") === true) {
-                $('#form-condition-6-wrap').fadeIn();
+
             } else {
                 $('#form-condition-6-wrap').fadeOut();
             }
         });
+
         $('#form-condition-6').bind('input propertychange', function () {
-            if (conditionValidator.element("#form-condition-6") === true) {
-                $('#form-condition-submit').fadeIn();
-            } else {
-                $('#form-condition-submit').fadeOut();
-            }
-        });
-        $('#form-condition-7').bind('input propertychange', function () {
             if (conditionValidator.element("#form-condition-7") === true) {
-                $('#form-condition-submit').fadeIn();
+                $('#form-condition-7-wrap').fadeIn();
             } else {
-                $('#form-condition-submit').fadeOut();
+                $('#form-condition-7-wrap').fadeOut();
             }
         });
+
         $('#form-condition-8').bind('input propertychange', function () {
             if (conditionValidator.element("#form-condition-8") === true) {
                 $('#form-condition-submit').fadeIn();
@@ -555,12 +677,25 @@
     $(document).on('click', '#addbtn', (function () {
         var btn_id = "pac-input" + search_count;
         search_count++;
-        $('.searches').append('<li class="ui-state-default">' +
-            'drag<input id="' + btn_id + '" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
-            '<input type="button" class="delbtn" value="delete">' +
-            '<input type="hidden" class="p_id">' +
-            '<input type="hidden" class="p_name">' +
-            '</li>');
+        $('.searches').append('<li><div class="map-location col-md-6">' +
+            '<div><label>Location</label></div>' +
+            '<input class="sm-form-control" id="pac-input" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
+              '<input type="hidden" class="p_id">' +
+              '<input type="hidden" class="p_name">' +
+            '</div>' +
+            '<div class="map-time col-md-4">' +
+              '<div><label>Time</label></div>' +
+              '<input class="sm-form-control timing" type="text">' +
+            '</div>' +
+            '<div class="map-events col-md-8">' +
+              '<div><label>Event</label></div>' +
+            ' <input class="sm-form-control event" type="text">' +
+            '</div>' +
+            '<div class="map-delete col-md-4">' +
+              '<div><label></label></div>' +
+              '<input type="button" class="button button-border button-border-thin button-red delbtn" value="delete">' +
+            '</div></li>');
+
         var for_select = '#' + btn_id;
         var this_li = $(for_select).parent();
 
@@ -641,7 +776,7 @@
             markers.splice(index, 1);
             autocompletes.splice(index, 1);
         }
-        $(this).parent().remove();
+        $(this).parent().parent().remove();
         console.log(markers);
     });
     ;
