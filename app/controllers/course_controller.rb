@@ -1,6 +1,5 @@
 class CourseController < ApplicationController
 
-
   ##CREATE
   def course_new
   end

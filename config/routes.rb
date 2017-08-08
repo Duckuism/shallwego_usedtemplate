@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
 
-
   # conversations
   resources :conversations do
     member do
@@ -94,13 +93,22 @@ Rails.application.routes.draw do
   get 'foreigner/foreigner_detail'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "home#index"
 
   resource :course
 
   resource :foreigner
 
   resource :local
+
+  devise_scope :user do
+    authenticated :user do
+      root 'course#course_list', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'home#index', as: :unauthenticated_root
+    end
+  end
 
 
 end

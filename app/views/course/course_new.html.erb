@@ -91,8 +91,34 @@
               <textarea class="sm-form-control required" id="form-condition-5" name="form-condition-5" rows="5" col="20" placeholder="Enter Minimum 20 Characters"></textarea>
             </div>
 
-            <div class="col_full" id="form-condition-submit" style="display:none;">
-              <button class="button button-3d nomargin" type="submit">Send Quote</button>
+            <div class="col_full", id="form-condition-6-wrap" style="display:none;" >
+              <!-- 지도 시작 -->
+              <div id="map"></div>
+
+              <div id="main_div">
+                <input class="button button-3d nomargin" type="button" id="addbtn" value="add">
+                <br>
+                <input type="text" id="title" placeholder="title">
+                <input type="file" class="required sm-form-control" name="imgs[]" id="inputImage" multiple=true>
+                <ol class="searches" id="sortable">
+                  <li class="ui-state-default">
+                    drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
+                    <input type="button" class="button button-3d nomargin" value="delete">
+                    <input type="hidden" class="p_id">
+                    <input type="hidden" class="p_name">
+                  </li>
+                </ol>
+                <br>
+                <br>
+                <div class="carousel">
+                </div>
+
+              </div>
+              <!--지도 끝-->
+            </div>
+
+            <div class="col_full" id="form-condition-submit">
+              <button class="button button-3d nomargin" id="save" type="submit">Send Quote</button>
             </div>
 
           </form>
@@ -100,31 +126,6 @@
         </div>
 
       </div>
-
-      <!-- 지도 시작 -->
-      <div id="map"></div>
-
-      <div id="main_div">
-        <input type="button" id="addbtn" value="add">
-        <input type="button" id="save" value="save">
-        <br>
-        <input type="text" id="title" placeholder="title">
-        <input type="file" name="imgs[]" id="inputImage" multiple=true>
-        <ol class="searches" id="sortable">
-          <li class="ui-state-default">
-            drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
-            <input type="button" class="delbtn" value="delete">
-            <input type="hidden" class="p_id">
-            <input type="hidden" class="p_name">
-          </li>
-        </ol>
-        <br>
-        <br>
-        <div class="carousel">
-        </div>
-
-      </div>
-      <!--지도 끝-->
 
     </div>
 
@@ -423,9 +424,13 @@
 
         $('#form-condition-5').bind('input propertychange', function() {
             if( conditionValidator.element( "#form-condition-5" ) === true ) {
-                $('#form-condition-submit').fadeIn();
+                $('#form-condition-6-wrap').fadeIn();
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.449610, lng: 126.653084},
+                    zoom: 16
+                });
             } else {
-                $('#form-condition-submit').fadeOut();
+                $('#form-condition-6-wrap').fadeOut();
             }
         });
         $('#form-condition-6').bind('input propertychange', function() {
@@ -727,4 +732,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARFVHKNuUhIbya3S0o0ieuYUI0q5OHz_I&libraries=places&callback=initMap" async defer></script>
 
 </body>
+
 </html>
