@@ -2,21 +2,21 @@
 <html dir="ltr" lang="en-US">
 <head>
 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="author" content="SemiColonWeb" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="author" content="SemiColonWeb"/>
 
   <!-- Stylesheets
   ============================================= -->
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/style.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/css/dark.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/css/animate.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="/assets/style.css" type="text/css"/>
+  <link rel="stylesheet" href="/assets/css/dark.css" type="text/css"/>
+  <link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css"/>
+  <link rel="stylesheet" href="/assets/css/animate.css" type="text/css"/>
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css"/>
 
-  <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <!--[if lt IE 9]>
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
@@ -47,6 +47,7 @@
 
   <!-- Content
    ============================================= -->
+
   <section id="content">
 
     <div class="content-wrap">
@@ -60,45 +61,34 @@
           <form id="conditional-form" action="#" method="post" class="nobottommargin">
 
             <div class="col_full">
-              <label for="form-condition-1">Enter Name</label>
+              <label for="form-condition-1">Enter Title</label>
               <input type="text" class="sm-form-control required" id="form-condition-1" name="form-condition-1" value="">
             </div>
 
             <div class="col_full" id="form-condition-2-wrap" style="display:none;">
-              <label for="form-condition-2">Enter Email</label>
-              <input type="email" class="sm-form-control required email" id="form-condition-2" name="form-condition-2" value="">
+              <label for="form-condition-2">Enter Content</label>
+              <input type="text" class="sm-form-control required" id="form-condition-2" name="form-condition-2" value="">
             </div>
 
             <div class="col_full" id="form-condition-3-wrap" style="display:none;">
-              <label for="form-condition-3">Enter Website</label>
-              <input type="url" class="sm-form-control required url" id="form-condition-3" name="form-condition-3" value="" placeholder="Include http://">
+              <label for="form-condition-3">Enter Limit Person</label>
+              <input type="number" class="sm-form-control required number" id="form-condition-3" name="form-condition-3" value="">
             </div>
 
             <div class="col_full" id="form-condition-4-wrap" style="display:none;">
-              <label for="form-condition-4">Select Amount in Dollars($)</label>
-              <select id="form-condition-4" name="form-condition-4" class="required sm-form-control">
-                <option value="">-- Select One --</option>
-                <option value="$500 to $1000">$500 to $1000</option>
-                <option value="$1000 to $2000">$1000 to $1999</option>
-                <option value="$2000 to $3000">$2000 to $3000</option>
-                <option value="$3000 to $5000">$3000 to $5000</option>
-                <option value="more than $5000">more than $5000</option>
-              </select>
+              <label for="form-condition-4">Select Start Date And End Date</label>
+              <input type="date" class="sm-form-control required date" id="form-condition-4" name="form-condition-4" value="">
+              ~
+              <input type="date" class="sm-form-control required date" id="form-condition-4-end" name="form-condition-4" value="">
             </div>
 
-            <div class="col_full" id="form-condition-5-wrap" style="display:none;">
-              <label for="form-condition-5">Enter Message</label>
-              <textarea class="sm-form-control required" id="form-condition-5" name="form-condition-5" rows="5" col="20" placeholder="Enter Minimum 20 Characters"></textarea>
-            </div>
-
-            <div class="col_full", id="form-condition-6-wrap" style="display:none;" >
+            <div class="col_full" , id="form-condition-5-wrap" style="display:none;">
               <!-- 지도 시작 -->
               <div id="map"></div>
 
               <div id="main_div">
                 <input class="button button-3d nomargin" type="button" id="addbtn" value="add">
                 <br>
-                <input type="text" id="title" placeholder="title">
                 <input type="file" class="required sm-form-control" name="imgs[]" id="inputImage" multiple=true>
                 <ol class="searches" id="sortable">
                   <li class="ui-state-default">
@@ -118,7 +108,7 @@
             </div>
 
             <div class="col_full" id="form-condition-submit">
-              <button class="button button-3d nomargin" id="save" type="submit">Send Quote</button>
+              <input type="button" class="button button-3d nomargin" id="save">Send Quote</input>
             </div>
 
           </form>
@@ -149,7 +139,8 @@
 
               <img src="/assets/footer-widget-logo.png" alt="" class="footer-logo">
 
-              <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+              <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design
+                Standards.</p>
 
               <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
                 <address>
@@ -238,12 +229,16 @@
             <div class="row">
 
               <div class="col-md-6 bottommargin-sm">
-                <div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+                <div class="counter counter-small">
+                  <span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span>
+                </div>
                 <h5 class="nobottommargin">Total Downloads</h5>
               </div>
 
               <div class="col-md-6 bottommargin-sm">
-                <div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+                <div class="counter counter-small">
+                  <span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span>
+                </div>
                 <h5 class="nobottommargin">Clients</h5>
               </div>
 
@@ -252,7 +247,8 @@
           </div>
 
           <div class="widget subscribe-widget clearfix">
-            <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+            <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:
+            </h5>
             <div class="widget-subscribe-form-result"></div>
             <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
               <div class="input-group divcenter">
@@ -274,14 +270,18 @@
                   <i class="icon-facebook"></i>
                   <i class="icon-facebook"></i>
                 </a>
-                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+                <a href="#">
+                  <small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small>
+                </a>
               </div>
               <div class="col-md-6 clearfix">
                 <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
                   <i class="icon-rss"></i>
                   <i class="icon-rss"></i>
                 </a>
-                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+                <a href="#">
+                  <small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small>
+                </a>
               </div>
 
             </div>
@@ -350,7 +350,9 @@
 
           <div class="clear"></div>
 
-          <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+          <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span>
+          <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span>
+          <i class="icon-skype2"></i> CanvasOnSkype
         </div>
 
       </div>
@@ -380,7 +382,7 @@
 <script type="text/javascript" src="/assets/js/functions.js"></script>
 
 <script>
-    jQuery(document).ready( function($){
+    jQuery(document).ready(function ($) {
         var conditionValidator = $("#conditional-form").validate({
             rules: {
                 'form-condition-5': {
@@ -390,71 +392,68 @@
             }
         });
 
-        $('#form-condition-1').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-1" ) === true ) {
+        $('#form-condition-1').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-1") === true) {
                 $('#form-condition-2-wrap').fadeIn();
             } else {
                 $('#form-condition-2-wrap').fadeOut();
             }
         });
 
-        $('#form-condition-2').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-2" ) === true ) {
+        $('#form-condition-2').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-2") === true) {
                 $('#form-condition-3-wrap').fadeIn();
             } else {
                 $('#form-condition-3-wrap').fadeOut();
             }
         });
 
-        $('#form-condition-3').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-3" ) === true ) {
+        $('#form-condition-3').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-3") === true) {
                 $('#form-condition-4-wrap').fadeIn();
             } else {
                 $('#form-condition-4-wrap').fadeOut();
             }
         });
 
-        $('#form-condition-4').change( function() {
-            if( conditionValidator.element( "#form-condition-4" ) === true ) {
+        $('#form-condition-4').change(function () {
+            if (conditionValidator.element("#form-condition-4") === true) {
                 $('#form-condition-5-wrap').fadeIn();
             } else {
                 $('#form-condition-5-wrap').fadeOut();
             }
         });
 
-        $('#form-condition-5').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-5" ) === true ) {
+        $('#form-condition-5').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-5") === true) {
                 $('#form-condition-6-wrap').fadeIn();
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 37.449610, lng: 126.653084},
-                    zoom: 16
-                });
             } else {
                 $('#form-condition-6-wrap').fadeOut();
             }
         });
-        $('#form-condition-6').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-6" ) === true ) {
+        $('#form-condition-6').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-6") === true) {
                 $('#form-condition-submit').fadeIn();
             } else {
                 $('#form-condition-submit').fadeOut();
             }
         });
-        $('#form-condition-7').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-7" ) === true ) {
+        $('#form-condition-7').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-7") === true) {
                 $('#form-condition-submit').fadeIn();
             } else {
                 $('#form-condition-submit').fadeOut();
             }
         });
-        $('#form-condition-8').bind('input propertychange', function() {
-            if( conditionValidator.element( "#form-condition-8" ) === true ) {
+        $('#form-condition-8').bind('input propertychange', function () {
+            if (conditionValidator.element("#form-condition-8") === true) {
                 $('#form-condition-submit').fadeIn();
             } else {
                 $('#form-condition-submit').fadeOut();
             }
         });
     });
+
 
     // 지도 script
     // This example requires the Places library. Include the libraries=places
@@ -559,10 +558,10 @@
         $('.searches').append('<li class="ui-state-default">' +
             'drag<input id="' + btn_id + '" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
             '<input type="button" class="delbtn" value="delete">' +
-            '<input type="hidden" class="p_id">'+
-            '<input type="hidden" class="p_name">'+
+            '<input type="hidden" class="p_id">' +
+            '<input type="hidden" class="p_name">' +
             '</li>');
-        var for_select = '#'+btn_id;
+        var for_select = '#' + btn_id;
         var this_li = $(for_select).parent();
 
         var input = /** @type {!HTMLInputElement} */(
@@ -640,7 +639,7 @@
         if (markers[index] != undefined) {
             markers[index].setMap(null);
             markers.splice(index, 1);
-            autocompletes.splice(index,1);
+            autocompletes.splice(index, 1);
         }
         $(this).parent().remove();
         console.log(markers);
@@ -651,7 +650,7 @@
         var s = $(".p_id");
         var n = $(".p_name");
         var length = s.length
-        for(var i=0; i< length;i++) {
+        for (var i = 0; i < length; i++) {
             console.log(s[i]);
             console.log(n[i]);
         }
@@ -660,58 +659,88 @@
     //저장
     $(document).on('click', '#save', function () {
         var place_ids = "";
-        var place_names ="";
-        var title = $("#title").val();
+        var place_names = "";
+        var title = $("#form-condition-1").val();
+        var content = $("#form-condition-2").val();
+        var limitPerson = $("#form-condition-3").val();
+        var startDate = $("#form-condition-4").val();
+        var endDate = $("#form-condition-4-end").val();
+
         var ids = $(".p_id");
         var names = $(".p_name");
         var length = ids.length;
-        for(var i=0; i< length;i++) {
-            place_ids += ids[i].value+",";
-            place_names += names[i].value+",";
+        for (var i = 0; i < length; i++) {
+            place_ids += ids[i].value + ",";
+            place_names += names[i].value + ",";
         }
-        sendPost('create', title ,place_ids, place_names)
+
+        sendPost('create', title, content, limitPerson, startDate, endDate, place_ids, place_names);
     });
 
-    function enter(e){
+    function enter(e) {
         if (window.event) {
             key = window.event.keyCode;
         } else if (e) {
             key = e.which;
         }
-        if(key == 13){
+        if (key == 13) {
             return false
         }
     }
 
     //post 전송
-    function sendPost(url , title, p_id, p_name){
+    function sendPost(url, title, content, limitPerson, startDate, endDate, p_id, p_name) {
 
-        var form=document.createElement("form");
-        form.name='tempPost';
-        form.method='post';
-        form.action=url;
-        form.enctype="multipart/form-data";
+        var form = document.createElement("form");
+        form.name = 'tempPost';
+        form.method = 'post';
+        form.action = url;
+        form.enctype = "multipart/form-data";
         document.body.appendChild(form);
 
-        var input=document.createElement("input");
-        input.type="hidden";
-        input.name='title';
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'title';
         input.value = title;
         $(form).append(input);
 
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'content';
+        input.value = content;
+        $(form).append(input);
+
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'limitPerson';
+        input.value = limitPerson;
+        $(form).append(input);
+
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'startDate';
+        input.value = startDate;
+        $(form).append(input);
+
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'endDate';
+        input.value = endDate;
+        $(form).append(input);
+
         //image
-        var image=document.getElementById("inputImage");
+        var image = document.getElementById("inputImage");
         $(form).append(image);
 
-        var input=document.createElement("input");
-        input.type="hidden";
-        input.name='place_ids';
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'place_ids';
         input.value = p_id;
         $(form).append(input);
 
-        var input=document.createElement("input");
-        input.type="hidden";
-        input.name='place_names';
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'place_names';
         input.value = p_name;
         $(form).append(input);
         $('#body').append(form);
@@ -722,10 +751,11 @@
     }
 
     //divtag 옮기기
-    $( function() {
+    $(function () {
         $("#sortable").sortable();
         $("#sortable").disableSelection();
-    } );
+    });
+
 
 </script>
 <!--지도 api 사용하기 위한 코드-->

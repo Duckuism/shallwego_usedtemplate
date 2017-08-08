@@ -38,7 +38,7 @@
   <section id="page-title">
 
     <div class="container clearfix">
-      <h1>Ibiza: Full Moon Beach Party</h1>
+      <h1><%= @course.title %></h1>
 
     </div>
 
@@ -71,8 +71,8 @@
               </div>
               <div class="panel-body">
                 <ul class="iconlist nobottommargin">
-                  <li><i class="icon-calendar3"></i> 31st March, 2015</li>
-                  <li><i class="icon-time"></i> 20:00 - 02:00</li>
+                  <li><i class="icon-calendar3"></i> <%= @course.start_date %> ~ <%= @course.end_datetitle %></li>
+                  <li><i class="icon-time"></i> </li>
                   <li><i class="icon-map-marker2"></i> Ibiza, Spain</li>
                   <li><i class="icon-euro"></i> <strong>99.99</strong></li>
                 </ul>
