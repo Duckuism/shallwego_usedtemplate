@@ -92,7 +92,9 @@
                 <input type="file" class="required sm-form-control" name="imgs[]" id="inputImage" multiple=true>
                 <ol class="searches" id="sortable">
                   <li class="ui-state-default">
+                    <input type="text" class="timing" placeholder="Enter time">
                     drag<input id="pac-input" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">
+                    <input type="text" class="event" placeholder="Enter event">
                     <input type="button" class="button button-3d nomargin" value="delete">
                     <input type="hidden" class="p_id">
                     <input type="hidden" class="p_name">
@@ -556,7 +558,9 @@
         var btn_id = "pac-input" + search_count;
         search_count++;
         $('.searches').append('<li class="ui-state-default">' +
+            '<input type="text" class="timing" placeholder="Enter time">'+
             'drag<input id="' + btn_id + '" class="controls" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
+            '<input type="text" class="event" placeholder="Enter event">'+
             '<input type="button" class="delbtn" value="delete">' +
             '<input type="hidden" class="p_id">' +
             '<input type="hidden" class="p_name">' +
@@ -660,6 +664,8 @@
     $(document).on('click', '#save', function () {
         var place_ids = "";
         var place_names = "";
+        var place_timings="";
+        var place_events="";
         var title = $("#form-condition-1").val();
         var content = $("#form-condition-2").val();
         var limitPerson = $("#form-condition-3").val();
@@ -668,13 +674,17 @@
 
         var ids = $(".p_id");
         var names = $(".p_name");
+        var timings= $(".timing");
+        var events= $(".event");
         var length = ids.length;
         for (var i = 0; i < length; i++) {
             place_ids += ids[i].value + ",";
             place_names += names[i].value + ",";
+            place_timings += timings[i].value + ",";
+            place_events += events[i].value + ",";
         }
 
-        sendPost('create', title, content, limitPerson, startDate, endDate, place_ids, place_names);
+        sendPost('create', title, content, limitPerson, startDate, endDate, place_ids, place_names, place_timings,place_events);
     });
 
     function enter(e) {
@@ -689,7 +699,7 @@
     }
 
     //post 전송
-    function sendPost(url, title, content, limitPerson, startDate, endDate, p_id, p_name) {
+    function sendPost(url, title, content, limitPerson, startDate, endDate, p_id, p_name, timings,events) {
 
         var form = document.createElement("form");
         form.name = 'tempPost';
@@ -743,6 +753,19 @@
         input.name = 'place_names';
         input.value = p_name;
         $(form).append(input);
+
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'timings';
+        input.value = timings;
+        $(form).append(input);
+
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = 'events';
+        input.value = events;
+        $(form).append(input);
+
         $('#body').append(form);
 
         form.submit();
