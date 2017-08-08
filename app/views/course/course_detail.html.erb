@@ -71,7 +71,7 @@
               </div>
               <div class="panel-body">
                 <ul class="iconlist nobottommargin">
-                  <li><i class="icon-calendar3"></i> <%= @course.start_date %> ~ <%= @course.end_datetitle %></li>
+                  <li><i class="icon-calendar3"></i> <%= @course.start_date %> ~ <%= @course.end_date %></li>
                   <li><i class="icon-time"></i> </li>
                   <li><i class="icon-map-marker2"></i> Ibiza, Spain</li>
                   <li><i class="icon-euro"></i> <strong>99.99</strong></li>
@@ -86,12 +86,6 @@
           <div class="col_three_fourth">
 
             <h3></h3>
-
-            <% @course.locations.each do |l| %>
-                <p>
-                  <input type="button" class="place" id="<%=l.place_id%>" value="<%= l.name %>">
-                </p>
-            <% end %>
 
 
             <h4>Inclusions</h4>
@@ -171,26 +165,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td><span class="label label-danger">10:00 - 12:00</span></td>
-                  <td>Main Auditorium</td>
-                  <td>WWDC Developer Conference</td>
-                </tr>
-                <tr>
-                  <td><span class="label label-danger">12:00 - 12:45</span></td>
-                  <td>Cafeteria</td>
-                  <td>Lunch</td>
-                </tr>
-                <tr>
-                  <td><span class="label label-danger">13:00 - 14:00</span></td>
-                  <td>Audio-Visual Lab</td>
-                  <td>Apple Engineers Brain-Storming &amp; Questionaire</td>
-                </tr>
-                <tr>
-                  <td><span class="label label-danger">15:00 - 18:00</span></td>
-                  <td>Room - 25, 2nd Floor</td>
-                  <td>Hardware Testing &amp; Evaluation</td>
-                </tr>
+
+                <% @course.locations.each do |l| %>
+                    <tr>
+                      <td><span class="label label-danger"><%=l.timing%></span></td>
+                      <td><a type="button" class="place" id="<%=l.place_id%>"><%= l.name %></a></td>
+                      <td><%=l.event%></td>
+                    </tr>
+                <% end %>
+
                 </tbody>
               </table>
             </div>
