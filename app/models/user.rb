@@ -33,4 +33,5 @@ class User < ActiveRecord::Base
   def mailboxer_email(object)
     self.email
   end
+  has_many :concepts
 end

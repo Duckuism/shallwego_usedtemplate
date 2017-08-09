@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <%= csrf_meta_tags %>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="SemiColonWeb" />
+
+  <!-- Stylesheets
+  ============================================= -->
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic|Play+Fair:700" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/style.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/dark.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
+
+  <!-- select2 bootstrap -->
+  <link rel="stylesheet" href="http://vitalets.github.io/x-editable/assets/select2/select2.css" type="text/css" />
+  <!-- Bootstrap Editable Plugin -->
+  <link rel="stylesheet" href="/assets/css/components/bs-editable.css" type="text/css" />
+  <!-- Bootstrap Typeaheadjs Plugin -->
+  <link href="http://vitalets.github.io/x-editable/assets/x-editable/inputs-ext/typeaheadjs/lib/typeahead.js-bootstrap.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+
+  <!-- Document Title
+  ============================================= -->
+  <title>Bootstrap Editable | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+  <!-- Page Title
+  ============================================= -->
+  <section id="page-title">
+
+    <div class="container clearfix">
+      <h1>your hang-out concept</h1>
+
+    </div>
+
+  </section><!-- #page-title end -->
+
+  <!-- Content
+  ============================================= -->
+  <!------------------------------------------------------------------------------------->
+
+  <!--------------------------------------------------------->
+  <div class="container">
+    <form method="get" action="/foreigner/update/<%=@concept.id%>">
+      <div class="form-group form-date">
+        <label>concept</label>
+        <br>
+        <select name="hangout_type">
+          <option value="<%=@concept.hangout_type%>"><%=@concept.hangout_type%></option>
+          <option value="I want to travel">I want to travel</option>
+          <option value="I want to see the neighborhood">I want to see the neighborhood</option>
+          <option value="I want to go to a restaurant">I want to go to a restaurant</option>
+          <option value="I want to party">I want to party</option>
+          <option value="I want to make new friends">I want to make new friends</option>
+          <option value="I want to talk at the cafe">I want to talk at the cafe</option>
+          <option value="I just want to drink beer">I just want to drink beer</option>
+        </select>
+        <br>
+        <br>
+        <div>
+          <label>Sex(성별)</label><br>
+          <input type="text" name="sex" class="form-control" value="<%=@concept.sex%>">
+        </div>
+        <br>
+        <div>
+          <label>Start_date</label>
+          <input type="date" class="form-control date_form" id="input_size1" name="start_date" value="<%=@concept.start_date%>" required> <br>
+          <span>start time</span>
+          <input type="time" class="form-control time_form" name="start_time" value="<%=@concept.start_time%>" required><br>
+          <label>End_date</label>
+          <input type="date" class="form-control date_form" id="input_size2" name="end_date" value="<%=@concept.end_date%>" required><br>
+          <span>end time</span>
+          <input type="time" class="form-control time_form" name="end_time" value="<%=@concept.end_time%>" required>
+        </div>
+        <br>
+        <div>
+          <label>type of accommodation</label><br>
+          <select name="accommodation_type">
+            <option value="<%=@concept.accommodation_type%>"><%=@concept.accommodation_type%></option>
+            <option value="Bed & Breakfast">Bed & Breakfast</option>
+            <option value="Backpacker Hostel">Backpacker Hostel</option>
+            <option value="Guest House">Guest House</option>
+            <option value="Hotel(general)">Hotel(general)</option>
+            <option value="Hotel(boutique)">Hotel(boutique)</option>
+            <option value="Resort">Resort</option>
+            <option value="Self-catering">Self-catering</option>
+            <option value="Private Home">Private Home</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label>location</label><br>
+          <select name="location">
+            <option value="<%=@concept.location%>"><%=@concept.location%></option>
+            <option value="Seoul">Seoul (서울)</option>
+            <option value="Busan">Busan (부산)</option>
+            <option value="Daegu">Daegu (대구)</option>
+            <option value="Incheon">Incheon (인천)</option>
+            <option value="Gwangju">Gwangju (광주)</option>
+            <option value="Daejeon">Daejeon (대전)</option>
+            <option value="Ulsan">Ulsan (울산)</option>
+            <option value="Gyeonggi-do">Gyeonggi-do (경기도)</option>
+            <option value="Gangwon-do">Gangwon-do (강원도)</option>
+            <option value="Chungcheongbuk-do">Chungcheongbuk-do</option>
+            <option value="Chungcheongnam-do">Chungcheongnam-do (충청남도)</option>
+            <option value="Jeollabuk-do">Jeollabuk-do (전라북도)</option>
+            <option value="Jeollanam-do">Jeollanam-do (전라남도)</option>
+            <option value="Gyeongsangbuk-do">Gyeongsangbuk-do (경상북도)</option>
+            <option value="Gyeongsangnam-do">Gyeongsangnam-do (경상남도)</option>
+            <option value="Jeju-do">Jeju-do (제주도)</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label>Number of people</label><br>
+          <input type="text" class="form-control" name="people" value="<%=@concept.people%>" placeholder="ex)1">
+        </div>
+        <br>
+        <div>
+          <label>Participation fee</label>
+          <input type="text" class="form-control" name="fee" value="<%=@concept.fee%>" placeholder="KRW(\)">
+        </div>
+        <br>
+
+        <div>
+          <label>Detail description</label>
+          <textarea name="description"  class="form-control" rows="8"><%=@concept.description%></textarea>
+        </div>
+      </div>
+      <input type="submit" class="button button-3d button-rounded button-red" value="save">
+    </form>
+    <!-------------------------------------------------------------------------------------->
+
+
+    <section id="content">
+
+      <div class="content-wrap">
+
+        <div class="container clearfix">
+
+          <table class="table table-bordered table-striped" style="clear: both">
+            <tbody>
+            <!--<tr>-->
+            <!--<td width="35%">Simple text field</td>-->
+            <!--<td width="65%">-->
+            <!--<a href="#" class="bt-editable" data-type="text"data-placement="right" data-pk="1" data-title="Enter username">Username</a>-->
+            <!--</td>-->
+            <!--</tr>-->
+            <tr>
+              <td>Sex (성별)</td>
+              <td>
+                <a href="#" class="bt-sex" data-type="select" data-pk="1" data-value="" data-title="Select sex"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Event date (날짜 day/month/year)</td>
+              <td>
+              <span>
+              <a href="#" class="bt-editable" data-type="combodate" data-value="" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select date of event">Start date</a>
+              </span>
+                <span>
+                ~
+              </span>
+                <span>
+              <a href="#" class="bt-editable" data-type="combodate" data-value="" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select date of event">End date</a>
+              </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Event datetime (시간)</td>
+              <td>
+              <span>
+              <a href="#" class="bt-event" data-type="combodate" data-template="HH:mm" data-format="HH:mm" data-viewformat="HH:mm" data-pk="1"  data-title="Setup event time">start time</a>
+              </span>
+                <span>
+                ~
+              </span>
+                <span>
+                <a href="#" class="bt-event" data-type="combodate" data-template="HH:mm" data-format="HH:mm" data-viewformat="HH:mm"  data-pk="1"  data-title="Setup event time">end time</a>
+              </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Participation fee (참가비)</td>
+              <td>
+                <a href="#" class="bt-editable" data-type="number" data-pk="1" data-placement="right" data-placeholder="KRW(₩)" data-title=""></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Type of accommodation (숙소 유형)</td>
+              <td>
+                <a href="#" class="bt-accomodation" data-type="checklist" data-value="" data-title="type of accomodation"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Number of people (인원)</td>
+              <td>
+                <a href="#" class="bt-people" data-type="checklist" data-value="" data-title="Select number of people"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Detailed description (상세 설명)</td>
+              <td>
+                <a href="#" class="bt-comments" data-type="textarea" data-pk="1" data-placeholder="" data-title=""></a>
+              </td>
+            </tr>
+            <!--<tr>-->
+            <!--<td>Twitter typeahead.js</td>-->
+            <!--<td>-->
+            <!--<a href="#" class="bt-state" data-type="typeaheadjs" data-pk="1" data-placement="right" data-title="Start typing State.."></a>-->
+            <!--</td>-->
+            <!--</tr>-->
+            <tr>
+              <td>Type of hang-out</td>
+              <td>
+                <a href="#" class="bt-theme" data-type="checklist" data-value="2,3" data-title="Select type of hang-out"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Location (위치)</td>
+              <td>
+                <a href="#" class="bt-location" data-type="checklist" data-value="" data-title="Select location"></a>
+              </td>
+            </tr>
+            <!--<tr>-->
+            <!--<td>Select2 (tags mode)</td>-->
+            <!--<td><a href="#" class="bt-tags" data-type="select2" data-pk="1" data-title="Enter tags">html, javascript</a></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>Select2 (dropdown mode)</td>-->
+            <!--<td>-->
+            <!--<a href="#" class="bt-country" data-type="select2" data-pk="1" data-value="BS" data-title="Select country"></a>-->
+            <!--</td>-->
+            <!--</tr>-->
+            </tbody>
+          </table>
+          <a href="#" class="button button-3d button-rounded button-red"><i class="icon-lock3"></i>Save</a>
+        </div>
+
+      </div>
+
+    </section><!-- #content end -->
+
+    <!-- Footer
+    ============================================= -->
+    <footer id="footer" class="dark">
+
+      <div class="container">
+
+        <!-- Footer Widgets
+        ============================================= -->
+        <div class="footer-widgets-wrap clearfix">
+
+          <div class="col_two_third">
+
+            <div class="col_one_third">
+
+              <div class="widget clearfix">
+
+                <img src="images/footer-widget-logo.png" alt="" class="footer-logo">
+
+                <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+
+                <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+                  <address>
+                    <strong>Headquarters:</strong><br>
+                    795 Folsom Ave, Suite 600<br>
+                    San Francisco, CA 94107<br>
+                  </address>
+                  <abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
+                  <abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
+                  <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col_one_third">
+
+              <div class="widget widget_links clearfix">
+
+                <h4>Blogroll</h4>
+
+                <ul>
+                  <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                  <li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+                  <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                  <li><a href="http://wordpress.org/support/">Support Forums</a></li>
+                  <li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+                  <li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+                  <li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+            <div class="col_one_third col_last">
+
+              <div class="widget clearfix">
+                <h4>Recent Posts</h4>
+
+                <div id="post-list-footer">
+                  <div class="spost clearfix">
+                    <div class="entry-c">
+                      <div class="entry-title">
+                        <h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                      </div>
+                      <ul class="entry-meta">
+                        <li>10th July 2014</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="spost clearfix">
+                    <div class="entry-c">
+                      <div class="entry-title">
+                        <h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+                      </div>
+                      <ul class="entry-meta">
+                        <li>10th July 2014</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="spost clearfix">
+                    <div class="entry-c">
+                      <div class="entry-title">
+                        <h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+                      </div>
+                      <ul class="entry-meta">
+                        <li>10th July 2014</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col_one_third col_last">
+
+            <div class="widget clearfix" style="margin-bottom: -20px;">
+
+              <div class="row">
+
+                <div class="col-md-6 bottommargin-sm">
+                  <div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+                  <h5 class="nobottommargin">Total Downloads</h5>
+                </div>
+
+                <div class="col-md-6 bottommargin-sm">
+                  <div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+                  <h5 class="nobottommargin">Clients</h5>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="widget subscribe-widget clearfix">
+              <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+              <div class="widget-subscribe-form-result"></div>
+              <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+                <div class="input-group divcenter">
+                  <span class="input-group-addon"><i class="icon-email2"></i></span>
+                  <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                  <span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+                </div>
+              </form>
+            </div>
+
+            <div class="widget clearfix" style="margin-bottom: -20px;">
+
+              <div class="row">
+
+                <div class="col-md-6 clearfix bottommargin-sm">
+                  <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                    <i class="icon-facebook"></i>
+                    <i class="icon-facebook"></i>
+                  </a>
+                  <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+                </div>
+                <div class="col-md-6 clearfix">
+                  <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                    <i class="icon-rss"></i>
+                    <i class="icon-rss"></i>
+                  </a>
+                  <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div><!-- .footer-widgets-wrap end -->
+
+      </div>
+
+      <!-- Copyrights
+      ============================================= -->
+      <div id="copyrights">
+
+        <div class="container clearfix">
+
+          <div class="col_half">
+            Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
+            <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+          </div>
+
+          <div class="col_half col_last tright">
+            <div class="fright clearfix">
+              <a href="#" class="social-icon si-small si-borderless si-facebook">
+                <i class="icon-facebook"></i>
+                <i class="icon-facebook"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-twitter">
+                <i class="icon-twitter"></i>
+                <i class="icon-twitter"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-gplus">
+                <i class="icon-gplus"></i>
+                <i class="icon-gplus"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-pinterest">
+                <i class="icon-pinterest"></i>
+                <i class="icon-pinterest"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-vimeo">
+                <i class="icon-vimeo"></i>
+                <i class="icon-vimeo"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-github">
+                <i class="icon-github"></i>
+                <i class="icon-github"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-yahoo">
+                <i class="icon-yahoo"></i>
+                <i class="icon-yahoo"></i>
+              </a>
+
+              <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                <i class="icon-linkedin"></i>
+                <i class="icon-linkedin"></i>
+              </a>
+            </div>
+
+            <div class="clear"></div>
+
+            <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+          </div>
+
+        </div>
+
+      </div><!-- #copyrights end -->
+
+    </footer><!-- #footer end -->
+
+  </div><!-- #wrapper end -->
+
+  <!-- Go To Top
+  ============================================= -->
+  <div id="gotoTop" class="icon-angle-up"></div>
+
+  <!-- External JavaScripts
+  ============================================= -->
+  <script type="text/javascript" src="/assets/js/jquery.js"></script>
+  <script type="text/javascript" src="/assets/js/plugins.js"></script>
+
+  <script type="text/javascript" src="/assets/js/components/moment.js"></script>
+
+  <!-- select2 bootstrap -->
+  <script type="text/javascript" src="http://vitalets.github.io/x-editable/assets/select2/select2.js"></script>
+
+  <!-- Bootstrap Editable Plugin -->
+  <script type="text/javascript" src="/assets/js/components/bs-editable.js"></script>
+
+  <!-- Bootstrap Typeaheadjs Plugin -->
+  <script src="http://vitalets.github.io/x-editable/assets/x-editable/inputs-ext/typeaheadjs/lib/typeahead.js"></script>
+  <script src="http://vitalets.github.io/x-editable/assets/x-editable/inputs-ext/typeaheadjs/typeaheadjs.js"></script>
+
+  <!-- Date & Time Picker JS -->
+  <script type="text/javascript" src="/assets/demos/travel/js/datepicker.js"></script>
+  <script type="text/javascript" src="/assets/js/components/timepicker.js"></script>
+
+  <!-- Footer Scripts
+  ============================================= -->
+  <script type="text/javascript" src="/assets/js/functions.js"></script>
+
+  <script>
+      $(document).ready(function() {
+          $('.bt-editable').editable();
+
+          $('.bt-sex').editable({
+              prepend: "<%=current_user.gender%>",
+              source: [
+                  {value: 1, text: 'Male'},
+                  {value: 2, text: 'Female'}
+              ],
+              display: function(value, sourceData) {
+                  var colors = {"": "gray", 1: "green", 2: "blue"},
+                      elem = $.grep(sourceData, function(o){return o.value == value;});
+
+                  if(elem.length) {
+                      $(this).text(elem[0].text).css("color", colors[value]);
+                  } else {
+                      $(this).empty();
+                  }
+              }
+          });
+
+          $('.bt-location').editable({
+              pk:1,
+              source: [
+                  {value: 1, text: 'Seoul (서울)'},
+                  {value: 2, text: 'Busan (부산)'},
+                  {value: 3, text: 'Daegu (대구)'},
+                  {value: 4, text: 'Incheon (인천)'},
+                  {value: 5, text: 'Gwangju (광주)'},
+                  {value: 6, text: 'Daejeon (대전)'},
+                  {value: 7, text: 'Ulsan (울산)'},
+                  {value: 8, text: 'Gyeonggi-do (경기도)'},
+                  {value: 9, text: 'Gangwon-do (강원도)'},
+                  {value: 10, text: 'Chungcheongbuk-do (충청북도)'},
+                  {value: 11, text: 'Chungcheongnam-do (충청남도)'},
+                  {value: 12, text: 'Jeollabuk-do (전라북도)'},
+                  {value: 13, text: 'Jeollanam-do (전라남도)'},
+                  {value: 14, text: 'Gyeongsangbuk-do (경상북도)'},
+                  {value: 15, text: 'Gyeongsangnam-do (경상남도)'},
+                  {value: 16, text: 'Jeju-do (제주도)'}
+              ]
+//            ,
+//            display: function(value, sourceData) {
+//                var colors = {"": "gray", 1: "green", 2: "blue"},
+//                    elem = $.grep(sourceData, function(o){return o.value == value;});
+//
+//                if(elem.length) {
+//                    $(this).text(elem[0].text).css("color", colors[value]);
+//                } else {
+//                    $(this).empty();
+//                }
+//            }
+          });
+
+          $('.bt-accomodation').editable({
+              pk: 1,
+              source: [
+                  {value: 1, text: 'Bed & Breakfast'},
+                  {value: 2, text: 'Backpacker Hostel'},
+                  {value: 3, text: 'Guest House'},
+                  {value: 4, text: 'Hotel(general)'},
+                  {value: 5, text: 'Hotel(boutique)'},
+                  {value: 6, text: 'Resort'},
+                  {value: 7, text: 'Self-catering'},
+                  {value: 8, text: 'Private Home'},
+
+              ],
+              display: function(value, sourceData) {
+                  var colors = {"": "gray", 1: "green", 2: "blue"},
+                      elem = $.grep(sourceData, function(o){return o.value == value;});
+
+                  if(elem.length) {
+                      $(this).text(elem[0].text).css("color", colors[value]);
+                  } else {
+                      $(this).empty();
+                  }
+              }
+          });
+
+          $('.bt-people').editable({
+              pk: 1,
+              source: [
+                  {value: 1, text: '2 people'},
+                  {value: 2, text: '3~4 people'},
+                  {value: 3, text: '5~6 people'},
+                  {value: 4, text: '7~8 people'},
+                  {value: 5, text: '9~10 people'},
+                  {value: 6, text: '11~15 people'},
+                  {value: 7, text: '16~20 people'},
+                  {value: 8, text: 'more people'}
+              ]
+//            ,
+//            display: function(value, sourceData) {
+//                var colors = {"": "gray", 1: "green", 2: "blue"},
+//                    elem = $.grep(sourceData, function(o){return o.value == value;});
+//
+//                if(elem.length) {
+//                    $(this).text(elem[0].text).css("color", colors[value]);
+//                } else {
+//                    $(this).empty();
+//                }
+//            }
+          });
+
+          $('.bt-group').editable({
+              showbuttons: false,
+              source: [
+                  {value: 1, text: 'Service'},
+                  {value: 2, text: 'Admin'},
+                  {value: 3, text: 'Support'},
+                  {value: 4, text: 'Customer'}
+              ],
+          });
+
+          $('.bt-event').editable({
+              placement: 'right',
+              combodate: {
+                  firstItem: 'name'
+              }
+          });
+
+          $('.bt-state').editable({
+              value: 'California',
+              typeahead: {
+                  name: 'state',
+                  local: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+              }
+          });
+
+          $('.bt-comments').editable({
+              showbuttons: 'bottom'
+          });
+
+          $('.bt-theme').editable({
+              pk: 1,
+              source: [
+                  {value: 1, text: 'I want to travel'},
+                  {value: 2, text: 'I want to see the neighborhood'},
+                  {value: 3, text: 'I want to go to a restaurant'},
+                  {value: 4, text: 'I want to party'},
+                  {value: 5, text: 'I want to make new friends'},
+                  {value: 6, text: 'I want to talk at the cafe'},
+                  {value: 7, text: 'I just want to drink beer'}
+              ]
+          });
+
+          $('.bt-tags').editable({
+              inputclass: 'input-large',
+              select2: {
+                  tags: ['html', 'javascript', 'css', 'ajax'],
+                  tokenSeparators: [",", " "]
+              }
+          });
+
+          var countries = [];
+          $.each({"BD": "Bangladesh", "BE": "Belgium", "BF": "Burkina Faso", "BG": "Bulgaria", "BA": "Bosnia and Herzegovina", "BB": "Barbados", "WF": "Wallis and Futuna", "BL": "Saint Bartelemey", "BM": "Bermuda", "BN": "Brunei Darussalam", "BO": "Bolivia", "BH": "Bahrain", "BI": "Burundi", "BJ": "Benin", "BT": "Bhutan", "JM": "Jamaica", "BV": "Bouvet Island", "BW": "Botswana", "WS": "Samoa", "BR": "Brazil", "BS": "Bahamas", "JE": "Jersey", "BY": "Belarus", "O1": "Other Country", "LV": "Latvia", "RW": "Rwanda", "RS": "Serbia", "TL": "Timor-Leste", "RE": "Reunion", "LU": "Luxembourg", "TJ": "Tajikistan", "RO": "Romania", "PG": "Papua New Guinea", "GW": "Guinea-Bissau", "GU": "Guam", "GT": "Guatemala", "GS": "South Georgia and the South Sandwich Islands", "GR": "Greece", "GQ": "Equatorial Guinea", "GP": "Guadeloupe", "JP": "Japan", "GY": "Guyana", "GG": "Guernsey", "GF": "French Guiana", "GE": "Georgia", "GD": "Grenada", "GB": "United Kingdom", "GA": "Gabon", "SV": "El Salvador", "GN": "Guinea", "GM": "Gambia", "GL": "Greenland", "GI": "Gibraltar", "GH": "Ghana", "OM": "Oman", "TN": "Tunisia", "JO": "Jordan", "HR": "Croatia", "HT": "Haiti", "HU": "Hungary", "HK": "Hong Kong", "HN": "Honduras", "HM": "Heard Island and McDonald Islands", "VE": "Venezuela", "PR": "Puerto Rico", "PS": "Palestinian Territory", "PW": "Palau", "PT": "Portugal", "SJ": "Svalbard and Jan Mayen", "PY": "Paraguay", "IQ": "Iraq", "PA": "Panama", "PF": "French Polynesia", "BZ": "Belize", "PE": "Peru", "PK": "Pakistan", "PH": "Philippines", "PN": "Pitcairn", "TM": "Turkmenistan", "PL": "Poland", "PM": "Saint Pierre and Miquelon", "ZM": "Zambia", "EH": "Western Sahara", "RU": "Russian Federation", "EE": "Estonia", "EG": "Egypt", "TK": "Tokelau", "ZA": "South Africa", "EC": "Ecuador", "IT": "Italy", "VN": "Vietnam", "SB": "Solomon Islands", "EU": "Europe", "ET": "Ethiopia", "SO": "Somalia", "ZW": "Zimbabwe", "SA": "Saudi Arabia", "ES": "Spain", "ER": "Eritrea", "ME": "Montenegro", "MD": "Moldova, Republic of", "MG": "Madagascar", "MF": "Saint Martin", "MA": "Morocco", "MC": "Monaco", "UZ": "Uzbekistan", "MM": "Myanmar", "ML": "Mali", "MO": "Macao", "MN": "Mongolia", "MH": "Marshall Islands", "MK": "Macedonia", "MU": "Mauritius", "MT": "Malta", "MW": "Malawi", "MV": "Maldives", "MQ": "Martinique", "MP": "Northern Mariana Islands", "MS": "Montserrat", "MR": "Mauritania", "IM": "Isle of Man", "UG": "Uganda", "TZ": "Tanzania, United Republic of", "MY": "Malaysia", "MX": "Mexico", "IL": "Israel", "FR": "France", "IO": "British Indian Ocean Territory", "FX": "France, Metropolitan", "SH": "Saint Helena", "FI": "Finland", "FJ": "Fiji", "FK": "Falkland Islands (Malvinas)", "FM": "Micronesia, Federated States of", "FO": "Faroe Islands", "NI": "Nicaragua", "NL": "Netherlands", "NO": "Norway", "NA": "Namibia", "VU": "Vanuatu", "NC": "New Caledonia", "NE": "Niger", "NF": "Norfolk Island", "NG": "Nigeria", "NZ": "New Zealand", "NP": "Nepal", "NR": "Nauru", "NU": "Niue", "CK": "Cook Islands", "CI": "Cote d'Ivoire", "CH": "Switzerland", "CO": "Colombia", "CN": "China", "CM": "Cameroon", "CL": "Chile", "CC": "Cocos (Keeling) Islands", "CA": "Canada", "CG": "Congo", "CF": "Central African Republic", "CD": "Congo, The Democratic Republic of the", "CZ": "Czech Republic", "CY": "Cyprus", "CX": "Christmas Island", "CR": "Costa Rica", "CV": "Cape Verde", "CU": "Cuba", "SZ": "Swaziland", "SY": "Syrian Arab Republic", "KG": "Kyrgyzstan", "KE": "Kenya", "SR": "Suriname", "KI": "Kiribati", "KH": "Cambodia", "KN": "Saint Kitts and Nevis", "KM": "Comoros", "ST": "Sao Tome and Principe", "SK": "Slovakia", "KR": "Korea, Republic of", "SI": "Slovenia", "KP": "Korea, Democratic People's Republic of", "KW": "Kuwait", "SN": "Senegal", "SM": "San Marino", "SL": "Sierra Leone", "SC": "Seychelles", "KZ": "Kazakhstan", "KY": "Cayman Islands", "SG": "Singapore", "SE": "Sweden", "SD": "Sudan", "DO": "Dominican Republic", "DM": "Dominica", "DJ": "Djibouti", "DK": "Denmark", "VG": "Virgin Islands, British", "DE": "Germany", "YE": "Yemen", "DZ": "Algeria", "US": "United States", "UY": "Uruguay", "YT": "Mayotte", "UM": "United States Minor Outlying Islands", "LB": "Lebanon", "LC": "Saint Lucia", "LA": "Lao People's Democratic Republic", "TV": "Tuvalu", "TW": "Taiwan", "TT": "Trinidad and Tobago", "TR": "Turkey", "LK": "Sri Lanka", "LI": "Liechtenstein", "A1": "Anonymous Proxy", "TO": "Tonga", "LT": "Lithuania", "A2": "Satellite Provider", "LR": "Liberia", "LS": "Lesotho", "TH": "Thailand", "TF": "French Southern Territories", "TG": "Togo", "TD": "Chad", "TC": "Turks and Caicos Islands", "LY": "Libyan Arab Jamahiriya", "VA": "Holy See (Vatican City State)", "VC": "Saint Vincent and the Grenadines", "AE": "United Arab Emirates", "AD": "Andorra", "AG": "Antigua and Barbuda", "AF": "Afghanistan", "AI": "Anguilla", "VI": "Virgin Islands, U.S.", "IS": "Iceland", "IR": "Iran, Islamic Republic of", "AM": "Armenia", "AL": "Albania", "AO": "Angola", "AN": "Netherlands Antilles", "AQ": "Antarctica", "AP": "Asia/Pacific Region", "AS": "American Samoa", "AR": "Argentina", "AU": "Australia", "AT": "Austria", "AW": "Aruba", "IN": "India", "AX": "Aland Islands", "AZ": "Azerbaijan", "IE": "Ireland", "ID": "Indonesia", "UA": "Ukraine", "QA": "Qatar", "MZ": "Mozambique"}, function(k, v) {
+              countries.push({id: k, text: v});
+          });
+          $('.bt-country').editable({
+              source: countries,
+              select2: {
+                  width: 200,
+                  placeholder: 'Select country',
+                  allowClear: true
+              }
+          });
+      });
+  </script>
+
+</body>
+<style>
+  #content .container {
+    text-align: center;
+  }
+  .content-wrap {
+    padding-top: 300px;
+  }
+</style>
+</html>

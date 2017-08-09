@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-
+  <%= csrf_meta_tags %>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="author" content="SemiColonWeb" />
 
@@ -54,6 +54,97 @@
 
   <!-- Content
   ============================================= -->
+  <!------------------------------------------------------------------------------------->
+  <div class="container">
+    <form method="get" action="/foreigner/create">
+      <div class="form-group form-date">
+        <input type="hidden" name="author" value="<%=current_user.name%>">
+        <label>concept</label>
+        <br>
+        <select name="hangout_type">
+          <option value="I want to travel">I want to travel</option>
+          <option value="I want to see the neighborhood">I want to see the neighborhood</option>
+          <option value="I want to go to a restaurant">I want to go to a restaurant</option>
+          <option value="I want to party">I want to party</option>
+          <option value="I want to make new friends">I want to make new friends</option>
+          <option value="I want to talk at the cafe">I want to talk at the cafe</option>
+          <option value="I just want to drink beer">I just want to drink beer</option>
+        </select>
+        <br>
+        <br>
+        <div>
+          <label>Sex(성별)</label><br>
+          <input type="text" name="sex" class="form-control" value="<%=current_user.gender%>">
+        </div>
+        <br>
+        <div>
+          <label>Start_date</label>
+          <input type="date" class="form-control date_form" id="input_size1" name="start_date" required> <br>
+          <span>start time</span>
+          <input type="time" class="form-control time_form" name="start_time" required><br>
+          <label>End_date</label>
+          <input type="date" class="form-control date_form" id="input_size2" name="end_date" required><br>
+          <span>end time</span>
+          <input type="time" class="form-control time_form" name="end_time" required>
+        </div>
+        <br>
+        <div>
+          <label>type of accommodation</label><br>
+          <select name="accommodation_type">
+            <option value="Bed & Breakfast">Bed & Breakfast</option>
+            <option value="Backpacker Hostel">Backpacker Hostel</option>
+            <option value="Guest House">Guest House</option>
+            <option value="Hotel(general)">Hotel(general)</option>
+            <option value="Hotel(boutique)">Hotel(boutique)</option>
+            <option value="Resort">Resort</option>
+            <option value="Self-catering">Self-catering</option>
+            <option value="Private Home">Private Home</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label>location</label><br>
+          <select name="location">
+            <option value="Seoul">Seoul (서울)</option>
+            <option value="Busan">Busan (부산)</option>
+            <option value="Daegu">Daegu (대구)</option>
+            <option value="Incheon">Incheon (인천)</option>
+            <option value="Gwangju">Gwangju (광주)</option>
+            <option value="Daejeon">Daejeon (대전)</option>
+            <option value="Ulsan">Ulsan (울산)</option>
+            <option value="Gyeonggi-do">Gyeonggi-do (경기도)</option>
+            <option value="Gangwon-do">Gangwon-do (강원도)</option>
+            <option value="Chungcheongbuk-do">Chungcheongbuk-do</option>
+            <option value="Chungcheongnam-do">Chungcheongnam-do (충청남도)</option>
+            <option value="Jeollabuk-do">Jeollabuk-do (전라북도)</option>
+            <option value="Jeollanam-do">Jeollanam-do (전라남도)</option>
+            <option value="Gyeongsangbuk-do">Gyeongsangbuk-do (경상북도)</option>
+            <option value="Gyeongsangnam-do">Gyeongsangnam-do (경상남도)</option>
+            <option value="Jeju-do">Jeju-do (제주도)</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label>Number of people</label><br>
+          <input type="text" class="form-control" name="people" placeholder="ex)1">
+        </div>
+        <br>
+        <div>
+          <label>Participation fee</label>
+          <input type="text" class="form-control" name="fee" placeholder="KRW(\)">
+        </div>
+        <br>
+
+        <div>
+          <label>Detail description</label>
+          <textarea name="description"  class="form-control" rows="8"></textarea>
+        </div>
+      </div>
+      <input type="submit" class="button button-3d button-rounded button-red" value="save">
+    </form>
+  <!-------------------------------------------------------------------------------------->
+
+
   <section id="content">
 
     <div class="content-wrap">
@@ -75,9 +166,17 @@
             </td>
           </tr>
           <tr>
-            <td>Event date (날짜)</td>
+            <td>Event date (날짜 day/month/year)</td>
             <td>
-              <a href="#" class="bt-editable" data-type="combodate" data-value="" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select date of event">day/month/year</a>
+              <span>
+              <a href="#" class="bt-editable" data-type="combodate" data-value="" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select date of event">Start date</a>
+              </span>
+              <span>
+                ~
+              </span>
+              <span>
+              <a href="#" class="bt-editable" data-type="combodate" data-value="" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select date of event">End date</a>
+              </span>
             </td>
           </tr>
           <tr>
@@ -101,7 +200,7 @@
             </td>
           </tr>
           <tr>
-            <td>Type of accomodation (숙소 유형)</td>
+            <td>Type of accommodation (숙소 유형)</td>
             <td>
               <a href="#" class="bt-accomodation" data-type="checklist" data-value="" data-title="type of accomodation"></a>
             </td>
@@ -419,7 +518,7 @@
         $('.bt-editable').editable();
 
         $('.bt-sex').editable({
-            prepend: "not selected",
+            prepend: "<%=current_user.gender%>",
             source: [
                 {value: 1, text: 'Male'},
                 {value: 2, text: 'Female'}

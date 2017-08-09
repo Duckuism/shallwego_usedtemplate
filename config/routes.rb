@@ -77,19 +77,21 @@ Rails.application.routes.draw do
 
   get 'foreigner/foreigner_hangout_concept'
 
+
   get 'foreigner/foreigner_detail'
 
   get 'foreigner/foreigner_list'
 
   get 'foreigner/course_edit'
 
-  get 'foreigner/update'
+  get 'foreigner/create' #Create
+  get 'foreigner/foreigner_detail/:id' => 'foreigner#foreigner_detail' #read
+  get 'foreigner/foreigner_concept_edit/:id' => 'foreigner#foreigner_concept_edit' #edit
+  get 'foreigner/update/:id' => 'foreigner#update' #update
+  get 'foreigner/destroy/:id' =>'foreigner#destroy' #destroy
 
-  get 'foreigner/delete'
 
-  get 'foreigner/foreigner_list'
 
-  get 'foreigner/foreigner_detail'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
