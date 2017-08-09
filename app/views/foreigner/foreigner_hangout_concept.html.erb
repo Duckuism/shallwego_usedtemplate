@@ -41,6 +41,17 @@
 ============================================= -->
 <div id="wrapper" class="clearfix">
 
+  <!-- Page Title
+  ============================================= -->
+  <section id="page-title">
+
+    <div class="container clearfix">
+      <h1>your hang-out concept</h1>
+
+    </div>
+
+  </section><!-- #page-title end -->
+
   <!-- Content
   ============================================= -->
   <section id="content">
@@ -51,76 +62,90 @@
 
         <table class="table table-bordered table-striped" style="clear: both">
           <tbody>
+          <!--<tr>-->
+            <!--<td width="35%">Simple text field</td>-->
+            <!--<td width="65%">-->
+              <!--<a href="#" class="bt-editable" data-type="text"data-placement="right" data-pk="1" data-title="Enter username">Username</a>-->
+            <!--</td>-->
+          <!--</tr>-->
           <tr>
-            <td width="35%">Simple text field</td>
-            <td width="65%">
-              <a href="#" class="bt-editable" data-type="text"data-placement="right" data-pk="1" data-title="Enter username">Username</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Empty text field, required</td>
-            <td>
-              <a href="#" class="bt-editable" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Enter your firstname"></a>
-            </td>
-          </tr>
-          <tr>
-            <td>Select, local array, custom display</td>
+            <td>Sex (성별)</td>
             <td>
               <a href="#" class="bt-sex" data-type="select" data-pk="1" data-value="" data-title="Select sex"></a>
             </td>
           </tr>
           <tr>
-            <td>Select, no buttons</td>
+            <td>Event date (날짜)</td>
             <td>
-              <a href="#" class="bt-group" data-type="select" data-pk="1" data-value="" data-title="Select Group"></a>
+              <a href="#" class="bt-editable" data-type="combodate" data-value="" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select date of event">day/month/year</a>
             </td>
           </tr>
           <tr>
-            <td>Select, error while loading</td>
+            <td>Event datetime (시간)</td>
             <td>
-              <a href="#" class="bt-editable" data-type="select" data-pk="1" data-value="0" data-source="/status" data-title="Select status">Active</a>
+              <span>
+              <a href="#" class="bt-event" data-type="combodate" data-template="HH:mm" data-format="HH:mm" data-viewformat="HH:mm" data-pk="1"  data-title="Setup event time">start time</a>
+              </span>
+              <span>
+                ~
+              </span>
+              <span>
+                <a href="#" class="bt-event" data-type="combodate" data-template="HH:mm" data-format="HH:mm" data-viewformat="HH:mm"  data-pk="1"  data-title="Setup event time">end time</a>
+              </span>
             </td>
           </tr>
           <tr>
-            <td>Combodate (date)</td>
+            <td>Participation fee (참가비)</td>
             <td>
-              <a href="#" class="bt-editable" data-type="combodate" data-value="1984-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select Date of birth"></a>
+              <a href="#" class="bt-editable" data-type="number" data-pk="1" data-placement="right" data-placeholder="KRW(₩)" data-title=""></a>
             </td>
           </tr>
           <tr>
-            <td>Combodate (datetime)</td>
+            <td>Type of accomodation (숙소 유형)</td>
             <td>
-              <a href="#" class="bt-event" data-type="combodate" data-template="D MMM YYYY  HH:mm" data-format="YYYY-MM-DD HH:mm" data-viewformat="MMM D, YYYY, HH:mm" data-pk="1"  data-title="Setup event date and time"></a>
+              <a href="#" class="bt-accomodation" data-type="checklist" data-value="" data-title="type of accomodation"></a>
             </td>
           </tr>
           <tr>
-            <td>Textarea, buttons below. Submit by <i>ctrl+enter</i></td>
+            <td>Number of people (인원)</td>
             <td>
-              <a href="#" class="bt-comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments">awesome user!</a>
+              <a href="#" class="bt-people" data-type="checklist" data-value="" data-title="Select number of people"></a>
             </td>
           </tr>
           <tr>
-            <td>Twitter typeahead.js</td>
+            <td>Detailed description (상세 설명)</td>
             <td>
-              <a href="#" class="bt-state" data-type="typeaheadjs" data-pk="1" data-placement="right" data-title="Start typing State.."></a>
+              <a href="#" class="bt-comments" data-type="textarea" data-pk="1" data-placeholder="" data-title=""></a>
+            </td>
+          </tr>
+          <!--<tr>-->
+            <!--<td>Twitter typeahead.js</td>-->
+            <!--<td>-->
+              <!--<a href="#" class="bt-state" data-type="typeaheadjs" data-pk="1" data-placement="right" data-title="Start typing State.."></a>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <tr>
+            <td>Type of hang-out</td>
+            <td>
+              <a href="#" class="bt-theme" data-type="checklist" data-value="2,3" data-title="Select type of hang-out"></a>
             </td>
           </tr>
           <tr>
-            <td>Checklist</td>
+            <td>Location (위치)</td>
             <td>
-              <a href="#" class="bt-fruits" data-type="checklist" data-value="2,3" data-title="Select fruits"></a>
+              <a href="#" class="bt-location" data-type="checklist" data-value="" data-title="Select location"></a>
             </td>
           </tr>
-          <tr>
-            <td>Select2 (tags mode)</td>
-            <td><a href="#" class="bt-tags" data-type="select2" data-pk="1" data-title="Enter tags">html, javascript</a></td>
-          </tr>
-          <tr>
-            <td>Select2 (dropdown mode)</td>
-            <td>
-              <a href="#" class="bt-country" data-type="select2" data-pk="1" data-value="BS" data-title="Select country"></a>
-            </td>
-          </tr>
+          <!--<tr>-->
+            <!--<td>Select2 (tags mode)</td>-->
+            <!--<td><a href="#" class="bt-tags" data-type="select2" data-pk="1" data-title="Enter tags">html, javascript</a></td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+            <!--<td>Select2 (dropdown mode)</td>-->
+            <!--<td>-->
+              <!--<a href="#" class="bt-country" data-type="select2" data-pk="1" data-value="BS" data-title="Select country"></a>-->
+            <!--</td>-->
+          <!--</tr>-->
           </tbody>
         </table>
         <a href="#" class="button button-3d button-rounded button-red"><i class="icon-lock3"></i>Save</a>
@@ -411,6 +436,89 @@
             }
         });
 
+        $('.bt-location').editable({
+            pk:1,
+            source: [
+                {value: 1, text: 'Seoul (서울)'},
+                {value: 2, text: 'Busan (부산)'},
+                {value: 3, text: 'Daegu (대구)'},
+                {value: 4, text: 'Incheon (인천)'},
+                {value: 5, text: 'Gwangju (광주)'},
+                {value: 6, text: 'Daejeon (대전)'},
+                {value: 7, text: 'Ulsan (울산)'},
+                {value: 8, text: 'Gyeonggi-do (경기도)'},
+                {value: 9, text: 'Gangwon-do (강원도)'},
+                {value: 10, text: 'Chungcheongbuk-do (충청북도)'},
+                {value: 11, text: 'Chungcheongnam-do (충청남도)'},
+                {value: 12, text: 'Jeollabuk-do (전라북도)'},
+                {value: 13, text: 'Jeollanam-do (전라남도)'},
+                {value: 14, text: 'Gyeongsangbuk-do (경상북도)'},
+                {value: 15, text: 'Gyeongsangnam-do (경상남도)'},
+                {value: 16, text: 'Jeju-do (제주도)'}
+            ]
+//            ,
+//            display: function(value, sourceData) {
+//                var colors = {"": "gray", 1: "green", 2: "blue"},
+//                    elem = $.grep(sourceData, function(o){return o.value == value;});
+//
+//                if(elem.length) {
+//                    $(this).text(elem[0].text).css("color", colors[value]);
+//                } else {
+//                    $(this).empty();
+//                }
+//            }
+        });
+
+        $('.bt-accomodation').editable({
+            pk: 1,
+            source: [
+                {value: 1, text: 'Bed & Breakfast'},
+                {value: 2, text: 'Backpacker Hostel'},
+                {value: 3, text: 'Guest House'},
+                {value: 4, text: 'Hotel(general)'},
+                {value: 5, text: 'Hotel(boutique)'},
+                {value: 6, text: 'Resort'},
+                {value: 7, text: 'Self-catering'},
+                {value: 8, text: 'Private Home'},
+
+            ],
+            display: function(value, sourceData) {
+                var colors = {"": "gray", 1: "green", 2: "blue"},
+                    elem = $.grep(sourceData, function(o){return o.value == value;});
+
+                if(elem.length) {
+                    $(this).text(elem[0].text).css("color", colors[value]);
+                } else {
+                    $(this).empty();
+                }
+            }
+        });
+
+        $('.bt-people').editable({
+            pk: 1,
+            source: [
+                {value: 1, text: '2 people'},
+                {value: 2, text: '3~4 people'},
+                {value: 3, text: '5~6 people'},
+                {value: 4, text: '7~8 people'},
+                {value: 5, text: '9~10 people'},
+                {value: 6, text: '11~15 people'},
+                {value: 7, text: '16~20 people'},
+                {value: 8, text: 'more people'}
+            ]
+//            ,
+//            display: function(value, sourceData) {
+//                var colors = {"": "gray", 1: "green", 2: "blue"},
+//                    elem = $.grep(sourceData, function(o){return o.value == value;});
+//
+//                if(elem.length) {
+//                    $(this).text(elem[0].text).css("color", colors[value]);
+//                } else {
+//                    $(this).empty();
+//                }
+//            }
+        });
+
         $('.bt-group').editable({
             showbuttons: false,
             source: [
@@ -440,15 +548,16 @@
             showbuttons: 'bottom'
         });
 
-        $('.bt-fruits').editable({
+        $('.bt-theme').editable({
             pk: 1,
-            limit: 3,
             source: [
-                {value: 1, text: 'banana'},
-                {value: 2, text: 'peach'},
-                {value: 3, text: 'apple'},
-                {value: 4, text: 'watermelon'},
-                {value: 5, text: 'orange'}
+                {value: 1, text: 'I want to travel'},
+                {value: 2, text: 'I want to see the neighborhood'},
+                {value: 3, text: 'I want to go to a restaurant'},
+                {value: 4, text: 'I want to party'},
+                {value: 5, text: 'I want to make new friends'},
+                {value: 6, text: 'I want to talk at the cafe'},
+                {value: 7, text: 'I just want to drink beer'}
             ]
         });
 
@@ -479,6 +588,9 @@
 <style>
   #content .container {
     text-align: center;
+  }
+  .content-wrap {
+    padding-top: 300px;
   }
 </style>
 </html>
