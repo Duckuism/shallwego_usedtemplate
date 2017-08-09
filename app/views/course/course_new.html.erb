@@ -426,7 +426,12 @@
 <script type="text/javascript" src="/assets/js/functions.js"></script>
 
 <script>
+    var map;
+    var markers = [];
+    var autocompletes = [];
+    var search_count = 1;
     jQuery(document).ready(function ($) {
+
         var conditionValidator = $("#conditional-form").validate({
             rules: {
                 'form-condition-5': {
@@ -582,11 +587,6 @@
     // This example requires the Places library. Include the libraries=places
     // parameter when you first load the API. For example:
     // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-    var map;
-    var markers = [];
-    var autocompletes = [];
-    var search_count = 1;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 37.449610, lng: 126.653084},
@@ -680,21 +680,21 @@
         search_count++;
         $('.searches').append('<li><div class="map-location col-md-6">' +
             '<div><label>Location</label></div>' +
-            '<input class="sm-form-control" id="pac-input" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
-              '<input type="hidden" class="p_id">' +
-              '<input type="hidden" class="p_name">' +
+            '<input class="sm-form-control" id="' + btn_id + '" type="text" onkeydown="return enter(event)" placeholder="Enter a location">' +
+            '<input type="hidden" class="p_id">' +
+            '<input type="hidden" class="p_name">' +
             '</div>' +
             '<div class="map-time col-md-4">' +
-              '<div><label>Time</label></div>' +
-              '<input class="sm-form-control timing" type="text">' +
+            '<div><label>Time</label></div>' +
+            '<input class="sm-form-control timing" type="text">' +
             '</div>' +
             '<div class="map-events col-md-8">' +
-              '<div><label>Event</label></div>' +
+            '<div><label>Event</label></div>' +
             ' <input class="sm-form-control event" type="text">' +
             '</div>' +
             '<div class="map-delete col-md-4">' +
-              '<div><label></label></div>' +
-              '<input type="button" class="button button-border button-border-thin button-red delbtn" value="delete">' +
+            '<div><label></label></div>' +
+            '<input type="button" class="button button-border button-border-thin button-red delbtn" value="delete">' +
             '</div></li>');
 
         var for_select = '#' + btn_id;
