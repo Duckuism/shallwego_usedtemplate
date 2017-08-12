@@ -9,6 +9,7 @@ class CreateCourses < ActiveRecord::Migration[5.0]
       t.integer :limit_person
       t.string :course_summary
 
+
       t.timestamps
     end
   end
