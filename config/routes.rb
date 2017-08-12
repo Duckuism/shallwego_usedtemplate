@@ -41,7 +41,6 @@ Rails.application.routes.draw do
 
   get 'support/delete'
 
-
   get 'course/course_new'
 
   get 'course/foreigner_hangout_concept'
