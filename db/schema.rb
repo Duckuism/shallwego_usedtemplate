@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 20170809114649) do
     t.datetime "end_date"
     t.integer  "limit_person"
     t.string   "course_summary"
+    t.integer  "user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "locations", force: :cascade do |t|

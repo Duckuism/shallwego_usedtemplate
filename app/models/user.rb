@@ -34,4 +34,5 @@ class User < ActiveRecord::Base
     self.email
   end
   has_many :concepts
+  has_many :courses
 end

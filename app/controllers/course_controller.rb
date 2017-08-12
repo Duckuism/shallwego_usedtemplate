@@ -5,7 +5,8 @@ class CourseController < ApplicationController
   end
 
   def create
-    @course = Course.new(title: params[:title],content: params[:content], limit_person: params[:limitPerson], start_date: params[:startDate], end_date: params[:endDate])
+    @user = User.find(current_user.id)
+    @course = @user.courses.new(title: params[:title],content: params[:content], limit_person: params[:limitPerson], start_date: params[:startDate], end_date: params[:endDate])
     @course.save
     @pictures = params[:imgs]
     @p = []
