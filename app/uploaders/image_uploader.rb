@@ -32,7 +32,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :main do
     # process resize_to_fit: [843.59, 369.98] #비율 그대로
-    process resize_to_fill: [843.59, 369.98] #지정한 크기로
+    process resize_to_fill: [750, 450] #지정한 크기로
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

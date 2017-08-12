@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20170809114649) do
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.string   "place_id"
+    t.string   "timing"
+    t.string   "event"
     t.integer  "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

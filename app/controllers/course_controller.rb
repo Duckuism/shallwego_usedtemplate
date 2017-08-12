@@ -5,7 +5,7 @@ class CourseController < ApplicationController
   end
 
   def create
-    @course = Course.new(title: params[:title])
+    @course = Course.new(title: params[:title],content: params[:content], limit_person: params[:limitPerson], start_date: params[:startDate], end_date: params[:endDate])
     @course.save
     @pictures = params[:imgs]
     @p = []
@@ -16,13 +16,17 @@ class CourseController < ApplicationController
 
     @place_ids = params[:place_ids]
     @place_names = params[:place_names]
+    @timings = params[:timings]
+    @events = params[:events]
     @place_ids_split = @place_ids.split(',')
     @place_names_split = @place_names.split(',')
-    @locations = @place_ids_split.zip(@place_names_split)
+    @timings_split = @timings.split(',')
+    @events_split = @events.split(',')
+    @locations = @place_ids_split.zip(@place_names_split,@timings_split,@events_split)
 
     @l =[]
-    @locations.each do |l_i,l_n|
-      @l<< @course.locations.new(place_id: l_i, name: l_n)
+    @locations.each do |l_i,l_n,t,e|
+      @l<< @course.locations.new(place_id: l_i, name: l_n, timing: t,event: e)
     end
     @l.each(&:save)
 
@@ -46,9 +50,7 @@ class CourseController < ApplicationController
 
   def update
 
-
   end
-
 
   ##DELETE
   def destroy
