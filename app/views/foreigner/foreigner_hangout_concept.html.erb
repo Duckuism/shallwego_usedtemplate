@@ -74,18 +74,18 @@
         <br>
         <div>
           <label>Sex(성별)</label><br>
-          <input type="text" name="sex" class="form-control" value="<%=current_user.gender%>">
+          <input class="concept_input" type="text" name="sex" class="form-control" value="<%=current_user.gender%>">
         </div>
         <br>
         <div>
-          <label>Start_date</label>
-          <input type="date" class="form-control date_form" id="input_size1" name="start_date" required> <br>
-          <span>start time</span>
-          <input type="time" class="form-control time_form" name="start_time" required><br>
-          <label>End_date</label>
-          <input type="date" class="form-control date_form" id="input_size2" name="end_date" required><br>
-          <span>end time</span>
-          <input type="time" class="form-control time_form" name="end_time" required>
+          <label>Start date</label>
+          <input type="date" class="form-control date_form concept_input" id="input_size1" name="start_date" required> <br>
+          <label>Start time</label>
+          <input type="time" class="form-control time_form concept_input" name="start_time" required><br>
+          <label>End date</label>
+          <input type="date" class="form-control date_form concept_input" id="input_size2" name="end_date" required><br>
+          <label>End time</label>
+          <input type="time" class="form-control time_form concept_input" name="end_time" required>
         </div>
         <br>
         <div>
@@ -126,12 +126,12 @@
         <br>
         <div>
           <label>Number of people</label><br>
-          <input type="text" class="form-control" name="people" placeholder="ex)1">
+          <input type="text" class="form-control concept_input" name="people" placeholder="ex)1">
         </div>
         <br>
         <div>
           <label>Participation fee</label>
-          <input type="text" class="form-control" name="fee" placeholder="KRW(\)">
+          <input type="text" class="form-control concept_input" name="fee" placeholder="KRW(\)">
         </div>
         <br>
 
@@ -531,6 +531,9 @@
   }
   .content-wrap {
     padding-top: 300px;
+  }
+  .concept_input {
+    width: 50%;
   }
 </style>
 </html>
