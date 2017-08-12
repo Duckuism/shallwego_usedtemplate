@@ -71,13 +71,19 @@
               </div>
               <div class="panel-body">
                 <ul class="iconlist nobottommargin">
-                  <li><i class="icon-calendar3"></i> <%= @course.start_date %> ~ <%= @course.end_date %></li>
+                  <li><i class="icon-calendar3"></i> <%= @course.start_date.strftime("%Y-%m-%d") %> ~ <%= @course.end_date.strftime("%Y-%m-%d") %> </li>
                   <li><i class="icon-users"></i> <%= @course.limit_person %> </li>
-                  <li><i class="icon-chat-3"></i> <strong> <%= @course.content %> </strong></li>
+                  <li><i class="icon-chat-3"></i> <strong> <%= @course.content %> </strong> </li>
+                  <li><i class="icon-like"></i> <strong id="<%= @course.id %>HowManyLikes"> <%= @course.likes.size %> </strong> </li>
                 </ul>
               </div>
             </div>
             <a href="#" class="btn btn-success btn-block btn-lg">Buy Tickets</a>
+            <% if current_user.is_like?(@course) %>
+                <a id="<%= @course.id %>like" class="btn btn-danger btn-block btn-lg">Don't Like This</a>
+            <% else %>
+                <a id="<%= @course.id %>like" class="btn btn-danger btn-block btn-lg">Like This</a>
+            <% end %>
           </div>
 
           <div class="clear"></div>
@@ -346,6 +352,23 @@
             }
         });
     });
+
+    $("#<%= @course.id %>like").click(function () {
+        $.ajax({
+            method: "POST",
+            url: "/course/<%= @course.id %>/like",
+            success: function (data) {
+                var text = $("#<%= @course.id %>like").text();
+                if (text === "Like This") {
+                    $("#<%= @course.id %>like").text("Don't Like This");
+                }
+                else {
+                    $("#<%= @course.id %>like").text("Like This");
+                }
+                $("#<%= @course.id %>HowManyLikes").text(data);
+            }
+        })
+    })
 </script>
 <!--지도 api 사용하기 위한 코드-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARFVHKNuUhIbya3S0o0ieuYUI0q5OHz_I&libraries=places&callback=initMap" async defer></script>

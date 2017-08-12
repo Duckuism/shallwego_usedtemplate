@@ -35,4 +35,10 @@ class User < ActiveRecord::Base
   end
   has_many :concepts
   has_many :courses
+  has_many :likes
+  has_many :liked_posts, through: :likes, source: :post
+
+  def is_like?(course)
+    Like.find_by(user_id: self.id, course_id: course.id).present?
+  end
 end

@@ -48,6 +48,8 @@ Rails.application.routes.draw do
 
   post 'course/create'
 
+  post 'course/:course_id/like' => 'likes#like_toggle'
+
   get 'course/course_edit'
 
   get 'course/update'
@@ -90,12 +92,11 @@ Rails.application.routes.draw do
   get 'foreigner/update/:id' => 'foreigner#update' #update
   get 'foreigner/destroy/:id' =>'foreigner#destroy' #destroy
 
-
-
+  post "/like", to: "likes#like_toggle"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resource :course
+  resource :courses
 
   resource :foreigner
 
