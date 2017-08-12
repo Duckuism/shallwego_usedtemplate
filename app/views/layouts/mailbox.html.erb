@@ -43,27 +43,10 @@
       ============================================= -->
       <div class="top-links">
         <ul>
-          <li><a href="/home/index">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/support/support_index">FAQs</a></li>
           <!--<li><a href="contact.html">Contact</a></li>-->
-          <li><a href="/home/login_register">Login</a>
-            <div class="top-link-section">
-              <form id="top-login" role="form">
-                <div class="input-group" id="top-login-username">
-                  <span class="input-group-addon"><i class="icon-user"></i></span>
-                  <input type="email" class="form-control" placeholder="Email address" required="">
-                </div>
-                <div class="input-group" id="top-login-password">
-                  <span class="input-group-addon"><i class="icon-key"></i></span>
-                  <input type="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <label class="checkbox">
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-                <button class="btn btn-danger btn-block" type="submit">Sign in</button>
-              </form>
-            </div>
-          </li>
+          <li><%= link_to 'Logout', destroy_user_session_path %></li>
         </ul>
       </div><!-- .top-links end -->
 
@@ -82,7 +65,7 @@
           <!--<li><a href="#" class="si-pinterest"><span class="ts-icon"><i class="icon-pinterest"></i></span><span class="ts-text">Pinterest</span></a></li>-->
           <!--<li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>-->
           <li><a href="tel:+91.11.85412542" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+82.10.95078230</span></a></li>
-          <li><a href="mailto:info@canvas.com" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">rnejrl123456@gmail.com</span></a></li>
+          <li><a href="/mailbox/inbox" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">rnejrl123456@gmail.com</span></a></li>
           <li><a href="#" class="si-line-head"><span class="ts-icon"><i class="icon-line-head"></i></span><span class="ts-text">Youduk Han</span></a></li>
         </ul>
       </div><!-- #top-social end -->
