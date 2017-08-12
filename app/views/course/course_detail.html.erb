@@ -74,15 +74,15 @@
                   <li><i class="icon-calendar3"></i> <%= @course.start_date.strftime("%Y-%m-%d") %> ~ <%= @course.end_date.strftime("%Y-%m-%d") %> </li>
                   <li><i class="icon-users"></i> <%= @course.limit_person %> </li>
                   <li><i class="icon-chat-3"></i> <strong> <%= @course.content %> </strong> </li>
-                  <li><i class="icon-like"></i> <strong id="<%= @course.id %>HowManyLikes"> <%= @course.likes.size %> </strong> </li>
+                  <li><i class="icon-heart3" style="color: red"></i> <strong id="<%= @course.id %>HowManyLikes"> <%= @course.likes.size %> </strong> </li>
                 </ul>
               </div>
             </div>
-            <a href="#" class="btn btn-success btn-block btn-lg">Buy Tickets</a>
+            <a href="#" class="btn btn-success btn-block btn-lg">Join</a>
             <% if current_user.is_like?(@course) %>
-                <a id="<%= @course.id %>like" class="btn btn-danger btn-block btn-lg">Don't Like This</a>
+                <a id="<%= @course.id %>like" class="btn btn-danger btn-block btn-lg">Dislike</a>
             <% else %>
-                <a id="<%= @course.id %>like" class="btn btn-danger btn-block btn-lg">Like This</a>
+                <a id="<%= @course.id %>like" class="btn btn-danger btn-block btn-lg">Like</a>
             <% end %>
           </div>
 
@@ -359,11 +359,11 @@
             url: "/course/<%= @course.id %>/like",
             success: function (data) {
                 var text = $("#<%= @course.id %>like").text();
-                if (text === "Like This") {
-                    $("#<%= @course.id %>like").text("Don't Like This");
+                if (text === "Like") {
+                    $("#<%= @course.id %>like").text("Dislike");
                 }
                 else {
-                    $("#<%= @course.id %>like").text("Like This");
+                    $("#<%= @course.id %>like").text("Like");
                 }
                 $("#<%= @course.id %>HowManyLikes").text(data);
             }

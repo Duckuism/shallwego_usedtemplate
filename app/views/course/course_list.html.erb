@@ -59,11 +59,9 @@
                   <div class="text-overlay-meta">
                     <span> <%= c.start_date.strftime("%Y-%m-%d") %> ~ <%= c.end_date.strftime("%Y-%m-%d") %> </span>
                   </div>
-                  <a href="/course/course_detail/<%=c.id%>" class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Read Story</span><i class="icon-angle-right"></i></a>
+                  <a href="/course/course_detail/<%=c.id%>" class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm" style="float: left"><span>Read Story</span><i class="icon-angle-right"></i></a>
+                  <div class="button button-border button-light button-small button-rounded noleftmargin topmargin-sm" id="<%= c.id %>HowManyLikes" style="cursor: default"><i class="icon-heart3" style="color: red"></i> <%= c.likes.size %></div>
                 </div>
-                <!--<div class="rounded-skill" data-color="#e74c3c" data-trackcolor="rgba(0,0,0,0.1)" data-size="80" data-percent="75" data-width="7" data-animate="3000">7.5</div>-->
-
-                <h3 id="<%= c.id %>HowManyLikes" class="btn btn-danger btn-lg"  default><i class="icon-like"></i><%= c.likes.size %></h3>
               </div>
             </div>
         <% end %>
