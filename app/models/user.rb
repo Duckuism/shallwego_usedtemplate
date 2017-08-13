@@ -23,7 +23,9 @@ class User < ActiveRecord::Base
   end
 
   # ---------------------------------------------------------------------------------
-
+  # image uploader setting
+  mount_uploader :image, ImageUploader
+  # ------------------------------------------------------------------
   acts_as_messageable
 
   def mailboxer_name

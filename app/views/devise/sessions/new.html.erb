@@ -64,31 +64,37 @@
                     </div>
                     <div class="col_full">
                       <%= f.label :name %><br />
-                      <%= f.text_field :name, class:"form-control", autofocus: true %>
+                      <%= f.text_field :name, class:"form-control", autofocus: true, :required => true %>
                     </div>
                     <div class="col_full">
                       <%= f.label :Phone_number %><br />
-                      <%= f.text_field :phone, class:"form-control", autofocus: true %>
+                      <%= f.text_field :phone, class:"form-control", autofocus: true, :required => true%>
                     </div>
                     <div class="col_full">
                       <%= f.label :gender %><br />
-                      <%= f.radio_button :gender, 'Male', :checked => false %>
+                      <%= f.radio_button :gender, 'Male', :checked => false , :required => true%>
                       <%= label :gender, 'Male' %>
-                      <%= f.radio_button :gender, 'Female' %>
+                      <%= f.radio_button :gender, 'Female', :required => true %>
                       <%= label :gender, 'Female' %>
                     </div>
 
                     <div class="col_full">
                       <%= f.label :"Foreigner?" %><br />
-                      <%= f.radio_button :local_foreigner, 'false', :checked => false %>
+                      <%= f.radio_button :local_foreigner, 'false', :checked => false, :required => true %>
                       <%= label :local_foreigner, "I'm foreigner" %>
-                      <%= f.radio_button :local_foreigner, 'true' %>
+                      <%= f.radio_button :local_foreigner, 'true', :required => true %>
                       <%= label :local_foreigner, "I'm Korean" %>
                     </div>
                     <!--Korean 일 경우true, foreigner일 경우 false-->
+
+                    <div class="col_full">
+                      <%= f.label :Profile_image %><br />
+                      <%= f.file_field :image, class:"form-control", :required => true%>
+                    </div>
+
                     <div class="col_full">
                       <%= f.label :introduce %><br />
-                      <%= f.text_area :introduce, class:"form-control", autofocus: true %>
+                      <%= f.text_area :introduce, class:"form-control", autofocus: true%>
                     </div>
                     <div class="col_full nobottommargin">
                       <%= f.submit "Sign up" ,class:"button button-3d button-black nomargin"%>
