@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :conversations do
     member do
       post :reply
-      post :trash
+      get :trash
       post :untrash
     end
   end
