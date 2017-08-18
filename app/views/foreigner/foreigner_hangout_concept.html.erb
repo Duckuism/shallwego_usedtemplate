@@ -60,6 +60,7 @@
       <div class="form-group form-date">
         <input type="hidden" name="author" value="<%=current_user.name%>">
         <input type="hidden" name="image" value="<%=current_user.image%>">
+        <input type="hidden" name="introduce" value="<%=current_user.introduce%>">
         <label>concept</label>
         <br>
         <select name="hangout_type">
@@ -67,7 +68,7 @@
           <option value="I want to see the neighborhood">I want to see the neighborhood</option>
           <option value="I want to go to a restaurant">I want to go to a restaurant</option>
           <option value="I want to party">I want to party</option>
-          <option value="I want to make new friends">I want to make new friends</option>
+          <option value="I want to make new friends">I want to sports</option>
           <option value="I want to talk at the cafe">I want to talk at the cafe</option>
           <option value="I just want to drink beer">I just want to drink beer</option>
         </select>
@@ -141,7 +142,7 @@
           <textarea name="description"  class="form-control" rows="8"></textarea>
         </div>
       </div>
-      <input type="submit" class="button button-3d button-rounded button-red" value="save">
+      <input type="submit" class="button button-border button-rounded button-fill button-aqua" value="save">
     </form>
     <!-------------------------------------------------------------------------------------->
 

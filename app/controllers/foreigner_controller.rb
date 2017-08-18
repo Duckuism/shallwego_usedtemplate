@@ -13,7 +13,8 @@ class ForeignerController < ApplicationController
                           accommodation_type: params[:accommodation_type], people: params[:people],
                           fee: params[:fee], description: params[:description], hangout_type: params[:hangout_type],
                           user_id: current_user.id, location: params[:location], start_time:params[:start_time],
-                          end_time:params[:end_time],author:params[:author],image:params[:image])
+                          end_time:params[:end_time],author:params[:author],image:params[:image],
+                          introduce:params[:introduce])
 
     if @concept.save
       flash[:alert] = "Save!"

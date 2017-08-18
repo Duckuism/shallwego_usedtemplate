@@ -15,6 +15,7 @@ class CreateConcepts < ActiveRecord::Migration[5.0]
       t.string :location
       t.belongs_to :user
       t.string :image
+      t.text :introduce
       t.timestamps
     end
   end

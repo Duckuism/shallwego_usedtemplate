@@ -39,19 +39,21 @@
 
   <!--read를 통해 확인가능한 정보들 -->
   <!--수정페이지value-값--------------------------------->
-  concept : <%=@concept.hangout_type%><br>
-  location : <%=@concept.location%><br>
-  sex : <%=@concept.sex%><br>
-  Start Date : <%=@concept.start_date%><br>
-  Start Time : <%=@concept.start_time%><br>
-  End Date : <%=@concept.end_date%><br>
-  End time : <%=@concept.end_time%><br>
-  Type of accommodation : <%=@concept.accommodation_type%><br>
-  Number of people : <%=@concept.people%><br>
-  Participation fee : <%=@concept.fee%><br>
-  author : <%=@concept.author%><br>
-  Detailed description : <%=@concept.description%><br>
-  profile : <img src="<%=@concept.image%>"/><br>
+  <!--concept : <%=@concept.hangout_type%><br>-->
+  <!--location : <%=@concept.location%><br>-->
+  <!--sex : <%=@concept.sex%><br>-->
+  <!--Start Date : <%=@concept.start_date%><br>-->
+  <!--Start Time : <%=@concept.start_time%><br>-->
+  <!--End Date : <%=@concept.end_date%><br>-->
+  <!--End time : <%=@concept.end_time%><br>-->
+  <!--Type of accommodation : <%=@concept.accommodation_type%><br>-->
+  <!--Number of people : <%=@concept.people%><br>-->
+  <!--Participation fee : <%=@concept.fee%><br>-->
+  <!--author : <%=@concept.author%><br>-->
+  <!--Detailed description : <%=@concept.description%><br>-->
+  <!--profile : <img src="<%=@concept.image%>"/><br>-->
+  <!--introduce : <%=@concept.introduce%><br>-->
+
 <!------------------------------------------------->
 
 
@@ -69,7 +71,7 @@
 
             <div class="heading-block noborder">
               <h3><%=@concept.author%></h3>
-              <span></span>
+              <span><%=@concept.introduce%></span>
             </div>
 
             <div class="clear"></div>
@@ -81,64 +83,96 @@
                 <div class="tabs tabs-alt clearfix" id="tabs-profile">
 
                   <ul class="tab-nav clearfix">
-                    <li><a href="#tab-feeds"><i class="icon-rss2"></i> Feeds</a></li>
-                    <li><a href="#tab-posts"><i class="icon-pencil2"></i> Posts</a></li>
-                    <li><a href="#tab-replies"><i class="icon-reply"></i> Replies</a></li>
-                    <li><a href="#tab-connections"><i class="icon-users"></i> Connections</a></li>
+                    <li><a href="#tab-feeds"><i class="icon-line-star"></i>My hang-out style</a></li>
+                    <li><a href="#tab-posts"><i class="icon-pencil2"></i>My posts</a></li>
+                    <li><a href="#tab-replies"><i class="icon-reply"></i>My replies</a></li>
+                    <li><a href="#tab-connections"><i class="icon-users"></i>My friends</a></li>
                   </ul>
 
                   <div class="tab-container">
 
                     <div class="tab-content clearfix" id="tab-feeds">
 
-                      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium harum ea quo! Nulla fugiat earum, sed corporis amet iste non, id facilis dolorum, suscipit, deleniti ea. Nobis, temporibus magnam doloribus. Reprehenderit necessitatibus esse dolor tempora ea unde, itaque odit. Quos.</p>
+                      <div class="accordion accordion-bg clearfix">
 
-                      <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
-                          <colgroup>
-                            <col class="col-xs-1">
-                            <col class="col-xs-7">
-                          </colgroup>
-                          <thead>
-                          <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td>
-                              <code>5/23/2016</code>
-                            </td>
-                            <td>Payment for VPS2 completed</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <code>5/23/2016</code>
-                            </td>
-                            <td>Logged in to the Account at 16:33:01</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <code>5/22/2016</code>
-                            </td>
-                            <td>Logged in to the Account at 09:41:58</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <code>5/21/2016</code>
-                            </td>
-                            <td>Logged in to the Account at 17:16:32</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <code>5/18/2016</code>
-                            </td>
-                            <td>Logged in to the Account at 22:53:41</td>
-                          </tr>
-                          </tbody>
-                        </table>
+                        <div class="acctitle"><i class="acc-open icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Possible dates & location (가능한 날짜와 장소)</div>
+                        <div class="acc_content clearfix">
+                          <ul class="iconlist iconlist-color nobottommargin">
+                            <li><i class="icon-ok"></i><%=@concept.location%></li>
+                            <li><i class="icon-ok"></i><%=@concept.start_date%> / <%=@concept.start_time%> &nbsp; ~ &nbsp; <%=@concept.end_date%> / <%=@concept.end_time%></li>
+
+                          </ul>
+                        </div>
+
+                        <div class="acctitle"><i class="acc-open icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Preferred type of accommodation / number of people / participation fee (숙박 유형, 인원 수, 참가비)</div>
+                        <div class="acc_content clearfix">
+                          <ul class="iconlist iconlist-color nobottommargin">
+                            <li><i class="icon-plus-sign"></i><%=@concept.accommodation_type%></li>
+                            <li><i class="icon-plus-sign"></i><%=@concept.people%> peoples</li>
+                            <li><i class="icon-plus-sign"></i><%=@concept.fee%> won(₩) </li>
+
+                          </ul>
+                        </div>
+
+                        <div class="acctitle"><i class="acc-open icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>
+                          Detailed description (세부 설명)</div>
+                        <div class="acc_content clearfix"><%=@concept.description%></div>
+                        <div class="acctitle"><i class="acc-open icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>
+                          Participated or Participating Course (참가했거나 참여 중인 코스)</div>
+
+                        <div class="table-responsive acc_content clearfix">
+                          <table class="table table-bordered table-striped">
+                            <colgroup>
+                              <col class="col-xs-1">
+                              <col class="col-xs-7">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                              <th>Time</th>
+                              <th>Course name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>
+                                <code>05/23/2016</code>
+                              </td>
+                              <td>Let's go Yeosu</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>07/12/2016</code>
+                              </td>
+                              <td>Play soccer this weekend</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>08/10/2016</code>
+                              </td>
+                              <td>Baobab beer</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>11/14/2016</code>
+                              </td>
+                              <td>Ultra Music Festival with you.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>03/05/2017</code>
+                              </td>
+                              <td>Ski camping</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
                       </div>
+
+                      <a href="/course/course_new" data-scrollto="#job-apply" class="button button-border button-rounded button-fill button-aqua">Suggest a course
+                      </a>
+
+                      <!--<div class="divider divider-short"><i class="icon-star3"></i></div>-->
 
                     </div>
                     <div class="tab-content clearfix" id="tab-posts">
@@ -245,7 +279,7 @@
                             </div>
                             <div class="comment-content clearfix">
                               <div class="comment-author">John Doe<span><a href="#" title="Permalink to this comment">April 24, 2012 at 10:46 am</a></span></div>
-                              <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                              <p></p>
                               <a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
                             </div>
                             <div class="clear"></div>
@@ -264,7 +298,7 @@
                                 <div class="comment-content clearfix">
                                   <div class="comment-author"><a href='#' rel='external nofollow' class='url'>SemiColon</a><span><a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span></div>
 
-                                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                  <p></p>
 
                                   <a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
                                 </div>
@@ -285,7 +319,7 @@
                             <div class="comment-content clearfix">
                               <div class="comment-author"><a href='http://themeforest.net/user/semicolonweb' rel='external nofollow' class='url'>SemiColon</a><span><a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span></div>
 
-                              <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                              <p></p>
 
                               <a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
                             </div>
@@ -303,22 +337,22 @@
 
                           <div class="team">
                             <div class="team-image">
-                              <img src="/assets/team/3.jpg" alt="John Doe">
+                              <img src="/assets/shallwego_style/avengers/hulk.jpg" alt="John Doe">
                             </div>
                             <div class="team-desc">
-                              <div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                              </a>
+                              <div class="team-title"><h4>Hulk</h4><span>avengers</span></div>
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">-->
+                                <!--<i class="icon-facebook"></i>-->
+                                <!--<i class="icon-facebook"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">-->
+                                <!--<i class="icon-twitter"></i>-->
+                                <!--<i class="icon-twitter"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">-->
+                                <!--<i class="icon-gplus"></i>-->
+                                <!--<i class="icon-gplus"></i>-->
+                              <!--</a>-->
                             </div>
                           </div>
 
@@ -328,22 +362,22 @@
 
                           <div class="team">
                             <div class="team-image">
-                              <img src="/assets/team/2.jpg" alt="Josh Clark">
+                              <img src="/assets/shallwego_style/avengers/스칼렛위치.jpg" alt="Josh Clark">
                             </div>
                             <div class="team-desc">
-                              <div class="team-title"><h4>Josh Clark</h4><span>Co-Founder</span></div>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                              </a>
+                              <div class="team-title"><h4>Scarlet witch</h4><span>avengers</span></div>
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">-->
+                                <!--<i class="icon-facebook"></i>-->
+                                <!--<i class="icon-facebook"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">-->
+                                <!--<i class="icon-twitter"></i>-->
+                                <!--<i class="icon-twitter"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">-->
+                                <!--<i class="icon-gplus"></i>-->
+                                <!--<i class="icon-gplus"></i>-->
+                              <!--</a>-->
                             </div>
                           </div>
 
@@ -353,22 +387,22 @@
 
                           <div class="team">
                             <div class="team-image">
-                              <img src="/assets/team/8.jpg" alt="Mary Jane">
+                              <img src="/assets/shallwego_style/avengers/블랙위도우.jpg" alt="Mary Jane">
                             </div>
                             <div class="team-desc">
-                              <div class="team-title"><h4>Mary Jane</h4><span>Sales</span></div>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                              </a>
+                              <div class="team-title"><h4>Black widow</h4><span>avengers</span></div>
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">-->
+                                <!--<i class="icon-facebook"></i>-->
+                                <!--<i class="icon-facebook"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">-->
+                                <!--<i class="icon-twitter"></i>-->
+                                <!--<i class="icon-twitter"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">-->
+                                <!--<i class="icon-gplus"></i>-->
+                                <!--<i class="icon-gplus"></i>-->
+                              <!--</a>-->
                             </div>
                           </div>
 
@@ -378,22 +412,22 @@
 
                           <div class="team">
                             <div class="team-image">
-                              <img src="/assets/team/4.jpg" alt="Nix Maxwell">
+                              <img src="/assets/shallwego_style/avengers/vision.jpg" alt="Nix Maxwell">
                             </div>
                             <div class="team-desc">
-                              <div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                              </a>
-                              <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                              </a>
+                              <div class="team-title"><h4>Vision</h4><span>avengers</span></div>
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">-->
+                                <!--<i class="icon-facebook"></i>-->
+                                <!--<i class="icon-facebook"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">-->
+                                <!--<i class="icon-twitter"></i>-->
+                                <!--<i class="icon-twitter"></i>-->
+                              <!--</a>-->
+                              <!--<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">-->
+                                <!--<i class="icon-gplus"></i>-->
+                                <!--<i class="icon-gplus"></i>-->
+                              <!--</a>-->
                             </div>
                           </div>
 
@@ -560,9 +594,11 @@
 <script type="text/javascript" src="/assets/js/functions.js"></script>
 
 <script>
-    jQuery( "#tabs-profile" ).on( "tabsactivate", function( event, ui ) {
-        jQuery( '.flexslider .slide' ).resize();
-    });
+    $(document).ready(function() {
+        jQuery("#tabs-profile").on("tabsactivate", function (event, ui) {
+            jQuery('.flexslider .slide').resize();
+        });
+    }
 </script>
 
 </body>
