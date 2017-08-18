@@ -59,6 +59,7 @@
     <form method="get" action="/foreigner/create">
       <div class="form-group form-date">
         <input type="hidden" name="author" value="<%=current_user.name%>">
+        <input type="hidden" name="image" value="<%=current_user.image%>">
         <label>concept</label>
         <br>
         <select name="hangout_type">

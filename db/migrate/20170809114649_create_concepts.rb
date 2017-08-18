@@ -14,6 +14,7 @@ class CreateConcepts < ActiveRecord::Migration[5.0]
       t.string :hangout_type
       t.string :location
       t.belongs_to :user
+      t.string :image
       t.timestamps
     end
   end

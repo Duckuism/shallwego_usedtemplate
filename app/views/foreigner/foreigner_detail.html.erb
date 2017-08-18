@@ -51,6 +51,7 @@
   Participation fee : <%=@concept.fee%><br>
   author : <%=@concept.author%><br>
   Detailed description : <%=@concept.description%><br>
+  profile : <img src="<%=@concept.image%>"/><br>
 <!------------------------------------------------->
 
 
@@ -64,11 +65,11 @@
 
           <div class="col-sm-9">
 
-            <img src="/assets/icons/avatar.jpg" class="alignleft img-circle img-thumbnail notopmargin nobottommargin" alt="Avatar" style="max-width: 84px;">
+            <img src="<%=@concept.image%>" class="alignleft img-circle img-thumbnail notopmargin nobottommargin" alt="Avatar" style="max-width: 84px;">
 
             <div class="heading-block noborder">
-              <h3>SemiColo</h3>
-              <span>Your Profile Bio</span>
+              <h3><%=@concept.author%></h3>
+              <span></span>
             </div>
 
             <div class="clear"></div>
