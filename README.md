@@ -1,24 +1,7 @@
-# README
+# SHALL WE GO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 한유덕, 김수환, 송원근, 전준호, 안진모, 박병훈
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## IMAGE
+https://github.com/YouDuk/shallwego_usedtemplate/blob/master/11.png
+https://github.com/YouDuk/shallwego_usedtemplate/blob/master/22.png
